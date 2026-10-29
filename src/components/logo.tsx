@@ -11,7 +11,7 @@ export function Logo({ className = "h-8" }: { className?: string }) {
         <path d="M6.5 16.5l3.5 3.5 7.5-7.5" fill="none" stroke="#FF6B4A" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
       </g>
       <text x="46" y="31" fontFamily="var(--font-nunito), system-ui" fontWeight="900" fontSize="32" fill="currentColor">al</text>
-      <text x="82" y="31" fontFamily="var(--font-nunito), system-ui" fontWeight="900" fontSize="32" fill="#C9A86A">Kin</text>
+      <text x="76" y="31" fontFamily="var(--font-nunito), system-ui" fontWeight="900" fontSize="32" fill="#C9A86A">Kin</text>
     </svg>
   );
 }
