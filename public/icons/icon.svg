@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="GoalKin">
+  <rect width="512" height="512" rx="112" fill="#14213D"/>
+  <g transform="translate(96 104)">
+    <rect x="0" y="24" width="320" height="300" rx="56" fill="#F7F3EC"/>
+    <path d="M0 80a56 56 0 0 1 56-56h208a56 56 0 0 1 56 56v28H0z" fill="#2F7D6D"/>
+    <rect x="64" y="-8" width="36" height="76" rx="18" fill="#C9A86A"/>
+    <rect x="220" y="-8" width="36" height="76" rx="18" fill="#C9A86A"/>
+    <path d="M90 214l50 50 96-96" fill="none" stroke="#FF6B4A" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
