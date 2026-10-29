@@ -10,7 +10,7 @@ Ship GoalKin: Finish-the-Year program live by Nov 20, 2026; New Year Reset sales
 - [x] Brand: logo concepts, word art with calendar "o", landing page draft (brand/)
 - [ ] Owner: register goalkin.app (trademark search first)
 - [x] Owner interview: owner chose full scope, built at once (Q1). Q2–Q7 use the recommended defaults, recorded in docs/DECISIONS.md and pending owner review
-- [~] App built on branch feature/goalkin-app, draft PR https://github.com/rtmendes/goalkin/pull/1 (typecheck, lint, 160 tests and build pass). Migration supabase/migrations/0001 NOT applied yet: waiting on owner approval, then run scripts/seed-templates.mjs
+- [~] App built on branch feature/goalkin-app, draft PR https://github.com/rtmendes/goalkin/pull/1 (typecheck, lint, 160 tests and build pass). Migration 0001 applied to the shared Supabase on 2026-10-29 with owner approval (26 gk_* tables, all with RLS; gk-media bucket); 46 templates seeded and published
 - [~] Goal builder, check-ins, tone modes, reminders (email, web push)
 - [~] Visibility levels + per-field switches + share preview
 - [~] Circles: invites, shared goal with member layers
@@ -23,14 +23,12 @@ Ship GoalKin: Finish-the-Year program live by Nov 20, 2026; New Year Reset sales
 - [~] Terms and notices drafted (/legal/*, with placeholders); legal review still needed
 
 ## Next step
-1. Owner approves applying the migration to the shared Supabase; then apply it and seed the templates.
-2. Set the missing env vars on Vercel (see PR #1 "Needed before launch"), deploy a preview, and run the private beta checklist (SOP §1 step 4) on phone and desktop.
-3. File the Google OAuth verification (calendar.app.created) now; it can take up to 10 days.
-4. Owner reviews docs/DECISIONS.md #2–#11 (defaults used without interview).
+1. Set the missing env vars on Vercel (see PR #1 "Needed before launch"), deploy a preview, and run the private beta checklist (SOP §1 step 4) on phone and desktop.
+2. File the Google OAuth verification (calendar.app.created) now; it can take up to 10 days.
+3. Owner reviews docs/DECISIONS.md #2–#11 (defaults used without interview).
 
 ## Blocked on
 - Domain purchase and name confirmation (owner).
-- Owner approval to apply supabase/migrations/0001_goalkin_core.sql to the shared self-hosted Supabase (it only adds new gk_* tables, a gk-media storage bucket and its policies).
 - No email-sending key in Infisical (RESEND_API_KEY); email reminders are skipped until one exists.
 - GoHighLevel checkout URLs (GK_CHECKOUT_*) and GHL_WEBHOOK_SECRET.
 - Vercel Pro (or an outside scheduler) for the 15-minute reminder cron.
