@@ -1,0 +1,138 @@
+{
+  "id": "small-group-study",
+  "name": "Small group study",
+  "area": "Giving and community",
+  "tier": "Creator",
+  "price": 14,
+  "summary": "Lead a small group study with a session plan, leader prompts and reminders for each meeting.",
+  "duration": "Set by your number of weeks",
+  "onboarding": [
+    {
+      "id": "size",
+      "prompt": "Group size?",
+      "type": "number",
+      "min": 2,
+      "max": 30,
+      "reaction": "Great."
+    },
+    {
+      "id": "weeks",
+      "prompt": "How many weeks?",
+      "type": "slider",
+      "min": 4,
+      "max": 16,
+      "reaction": "Session plan coming."
+    },
+    {
+      "id": "topic",
+      "prompt": "Study topic or book?",
+      "type": "text",
+      "reaction": "Great choice.",
+      "optional": true
+    },
+    {
+      "id": "day",
+      "prompt": "Meeting day?",
+      "type": "choice",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "reaction": "Set."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap the meeting time.",
+      "type": "calendar_slots",
+      "reaction": "Placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Launch",
+        "weeks": "1",
+        "benchmarks": [
+          "First session held"
+        ],
+        "actions": [
+          "Invites",
+          "Session 1 prompts"
+        ]
+      },
+      {
+        "name": "Study",
+        "weeks": "2-11",
+        "benchmarks": [
+          "Sessions held weekly"
+        ],
+        "actions": [
+          "Leader prompts",
+          "Reminders"
+        ]
+      },
+      {
+        "name": "Close",
+        "weeks": "12",
+        "benchmarks": [
+          "Final session"
+        ],
+        "actions": [
+          "Reflection",
+          "What next"
+        ]
+      }
+    ],
+    "calendar": "Weekly meetings with prompts attached and a reminder to members the day before. Week counts follow your chosen length."
+  },
+  "approach_variants": {
+    "habit": "Same day and time every week, with a reading reminder the day before.",
+    "willpower": "Read-ahead challenge and a countdown to the final session.",
+    "time": "Meeting and leader-prep blocks on the calendar; weekly time review.",
+    "reward": "A group celebration at the end that members choose together.",
+    "resource": "First week gathers books or guides, a venue, childcare and a co-leader."
+  },
+  "tracked_fields": [
+    {
+      "id": "sessions",
+      "label": "Sessions held",
+      "kind": "number",
+      "unit": "sessions",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "attendance",
+      "label": "Attendance",
+      "kind": "number",
+      "unit": "people",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "Members choose their own visibility; the leader sees only what each member shares.",
+    "Prayer requests and personal shares in the group stay private unless the person chooses to share.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A cancelled session moves the plan back one week.",
+  "addon_tracks": [
+    "Suggested: Small Group Leader Guide"
+  ],
+  "creator": {
+    "id": "goalkin",
+    "revenue_share": 0.7,
+    "license": "GoalKin launch template; replaced when a creator version is approved"
+  },
+  "price_log": [
+    {
+      "from": null,
+      "to": 14,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

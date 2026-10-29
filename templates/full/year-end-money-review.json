@@ -1,0 +1,142 @@
+{
+  "id": "year-end-money-review",
+  "name": "Year-end money review",
+  "area": "Wealth",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Review your household money in two short sessions and set next year's targets together.",
+  "duration": "2 to 3 weeks",
+  "onboarding": [
+    {
+      "id": "accounts",
+      "prompt": "Which accounts or areas will you look at?",
+      "type": "multi_choice",
+      "options": [
+        "Checking and savings",
+        "Credit cards",
+        "Loans",
+        "Retirement",
+        "Subscriptions",
+        "Giving"
+      ],
+      "reaction": "Good list. We'll make an agenda from it."
+    },
+    {
+      "id": "members",
+      "prompt": "Who's reviewing?",
+      "type": "choice",
+      "options": [
+        "Just me",
+        "Me and my partner",
+        "The whole household"
+      ],
+      "reaction": "Great. Everyone gets the agenda ahead of time."
+    },
+    {
+      "id": "partner",
+      "prompt": "Who should we invite to the sessions?",
+      "type": "text",
+      "reaction": "Invite ready. They'll see only what you share.",
+      "optional": true
+    },
+    {
+      "id": "date",
+      "prompt": "When do you want to have the review done by?",
+      "type": "date",
+      "reaction": "Locked. Two sessions land before then."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap two 60-minute slots for the sessions.",
+      "type": "calendar_slots",
+      "reaction": "Both sessions are on the calendar."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Prep",
+        "weeks": "1",
+        "benchmarks": [
+          "Statements and totals gathered"
+        ],
+        "actions": [
+          "Download year-end statements",
+          "List subscriptions"
+        ]
+      },
+      {
+        "name": "Session one: look back",
+        "weeks": "2",
+        "benchmarks": [
+          "Year reviewed"
+        ],
+        "actions": [
+          "Income and spending overview",
+          "What went well, what surprised you",
+          "Subscriptions to keep or cancel"
+        ]
+      },
+      {
+        "name": "Session two: look ahead",
+        "weeks": "2-3",
+        "benchmarks": [
+          "Up to five targets set for next year"
+        ],
+        "actions": [
+          "Savings, debt and giving targets",
+          "Who does what",
+          "Put next year's check-ins on the calendar"
+        ]
+      }
+    ],
+    "calendar": "A prep reminder, two 60-minute review sessions on the chosen slots, and quarterly check-ins for next year."
+  },
+  "approach_variants": {
+    "habit": "Make it a yearly ritual on the same week each year.",
+    "willpower": "Challenge: finish both sessions within one week.",
+    "time": "Fixed agenda with timed sections for each session.",
+    "reward": "Plan a treat after session two.",
+    "resource": "Prep checklist gathers every statement and log-in first."
+  },
+  "tracked_fields": [
+    {
+      "id": "sessions",
+      "label": "Sessions done",
+      "kind": "number",
+      "unit": "of 2",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "targets",
+      "label": "Targets set",
+      "kind": "number",
+      "unit": "targets",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "notes",
+      "label": "Review notes",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "This plan is general education, not financial advice. Check big decisions with a qualified professional.",
+    "Account numbers and log-ins are never asked for; you enter only the totals you choose.",
+    "Sessions work best when everyone can speak openly; pause if it gets heated and pick it up another day.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed session is rescheduled to the next free slot within a week; if the deadline passes, the plan suggests one combined session.",
+  "addon_tracks": [
+    "Suggested: Money Conversations for Couples"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

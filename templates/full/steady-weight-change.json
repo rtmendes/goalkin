@@ -1,0 +1,167 @@
+{
+  "id": "steady-weight-change",
+  "name": "Steady weight change",
+  "area": "Health",
+  "tier": "Premium",
+  "price": 24,
+  "summary": "Work toward a steady weight change with weekly habit targets for meals, steps and sleep instead of crash rules.",
+  "duration": "12 weeks, renewable",
+  "onboarding": [
+    {
+      "id": "direction",
+      "prompt": "What kind of change are you working toward?",
+      "type": "choice",
+      "options": [
+        "Gradual loss",
+        "Gradual gain",
+        "Keep steady where I am"
+      ],
+      "reaction": "Got it. We'll build habits, not crash rules."
+    },
+    {
+      "id": "target_date",
+      "prompt": "Is there a date you're working toward?",
+      "type": "date",
+      "reaction": "Noted. Steady habits beat a rushed deadline.",
+      "optional": true
+    },
+    {
+      "id": "routine",
+      "prompt": "What does a normal week look like now?",
+      "type": "multi_choice",
+      "options": [
+        "I cook most meals",
+        "I eat out often",
+        "I walk most days",
+        "I sit most of the day",
+        "My sleep is short"
+      ],
+      "reaction": "Thanks. We'll start from what you already do."
+    },
+    {
+      "id": "keep_foods",
+      "prompt": "Foods you won't give up?",
+      "type": "text",
+      "reaction": "Love it. They stay on the plan.",
+      "optional": true
+    },
+    {
+      "id": "doctor",
+      "prompt": "Have you talked to your doctor about this goal?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "Not yet, I'll book it",
+        "I'd rather do that later"
+      ],
+      "reaction": "Booking that chat is step one either way."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap times for a weekly check-in and a meal-planning slot.",
+      "type": "calendar_slots",
+      "reaction": "Set. Small weekly check-ins, no daily pressure."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Foundations",
+        "weeks": "1-4",
+        "benchmarks": [
+          "Doctor check-in done or booked",
+          "Hit 3 of 5 weekly habits for 3 weeks"
+        ],
+        "actions": [
+          "Talk to your doctor before starting",
+          "Pick 2 meal habits (for example a vegetable at lunch, water before meals)",
+          "Daily steps target",
+          "Regular bedtime"
+        ]
+      },
+      {
+        "name": "Build",
+        "weeks": "5-8",
+        "benchmarks": [
+          "Hit 4 of 5 weekly habits for 3 weeks"
+        ],
+        "actions": [
+          "Add one meal habit",
+          "Raise steps target gently",
+          "Plan one weekly meal-prep session"
+        ]
+      },
+      {
+        "name": "Make it yours",
+        "weeks": "9-12",
+        "benchmarks": [
+          "Habits feel normal most weeks",
+          "Optional weigh-in trend reviewed privately"
+        ],
+        "actions": [
+          "Choose which habits to keep",
+          "Set the next 12-week focus",
+          "Reflection: what worked"
+        ]
+      }
+    ],
+    "calendar": "A weekly check-in, a meal-planning slot, and optional walk slots. No daily weigh-in reminders; weigh-ins are optional and weekly at most."
+  },
+  "approach_variants": {
+    "habit": "One tiny habit added at a time, stacked on meals already eaten; habit streaks shown.",
+    "willpower": "Weekly habit challenge with a score out of five and a 12-week finish line.",
+    "time": "Meal planning, shopping and walks all become calendar blocks; weekly time review.",
+    "reward": "Owner-chosen non-food rewards at weeks 4, 8 and 12.",
+    "resource": "Week one sets up a doctor visit, a simple shopping list, walking shoes and a water bottle."
+  },
+  "tracked_fields": [
+    {
+      "id": "habits_hit",
+      "label": "Weekly habits hit",
+      "kind": "number",
+      "unit": "of 5",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "weigh_in",
+      "label": "Weigh-in (optional)",
+      "kind": "number",
+      "unit": "lb or kg",
+      "default_visibility": "private"
+    },
+    {
+      "id": "waist",
+      "label": "Waist measurement (optional)",
+      "kind": "number",
+      "unit": "in or cm",
+      "default_visibility": "private"
+    },
+    {
+      "id": "energy",
+      "label": "Energy this week",
+      "kind": "rating",
+      "unit": "1 to 5",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Talk to your doctor before starting. GoalKin offers education, not medical advice.",
+    "This is a habit plan, not a diet prescription; no calorie targets are set by GoalKin.",
+    "If eating, weight or body image feels distressing, pause the plan and reach out to a health professional.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed habits simply reset next week; there is no streak penalty. Two missed check-ins in a row prompt a lighter week with just one habit. After a month away, the plan restarts at Foundations with your previous habits pre-filled.",
+  "addon_tracks": [
+    "Suggested: Simple Weeknight Meals Track",
+    "Suggested: Mindful Eating Journal"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 24,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

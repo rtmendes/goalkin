@@ -1,0 +1,106 @@
+{
+  "id": "scripture-memory",
+  "name": "Scripture memory",
+  "area": "Faith and spirit",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Memorize scripture with a spaced-repetition review schedule paced to the verses you choose.",
+  "duration": "12 weeks",
+  "onboarding": [
+    {
+      "id": "verses",
+      "prompt": "Which verses or theme do you want to memorize?",
+      "type": "text",
+      "reaction": "Great choice. We'll set them in order."
+    },
+    {
+      "id": "per_week",
+      "prompt": "New verses per week?",
+      "type": "slider",
+      "min": 1,
+      "max": 5,
+      "reaction": "Steady wins with memory."
+    },
+    {
+      "id": "translation",
+      "prompt": "Which translation?",
+      "type": "text",
+      "reaction": "Noted.",
+      "optional": true
+    },
+    {
+      "id": "method",
+      "prompt": "How do you like to practise?",
+      "type": "choice",
+      "options": [
+        "Reading aloud",
+        "Writing it out",
+        "Listening",
+        "Flash cards"
+      ],
+      "reaction": "We'll match the reviews to that."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap a short daily review time.",
+      "type": "calendar_slots",
+      "reaction": "Review time placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Start",
+        "weeks": "1-4",
+        "benchmarks": [
+          "First verses memorized"
+        ],
+        "actions": [
+          "New verse(s) each week",
+          "Daily 5-minute review"
+        ]
+      },
+      {
+        "name": "Spaced review",
+        "weeks": "5-12",
+        "benchmarks": [
+          "Older verses still recalled at weekly review"
+        ],
+        "actions": [
+          "New verses continue",
+          "Reviews spaced out over days, then weeks"
+        ]
+      }
+    ],
+    "calendar": "A daily 5-minute review at the chosen slot; older verses come back on a spaced schedule."
+  },
+  "approach_variants": {
+    "habit": "Review stacked on a daily habit; streak.",
+    "willpower": "Monthly recitation challenge.",
+    "time": "Review time as a calendar block.",
+    "reward": "Owner-chosen reward at each 10 verses.",
+    "resource": "First week sets up cards or an app and a recitation partner."
+  },
+  "tracked_fields": [
+    {
+      "id": "verses",
+      "label": "Verses memorized",
+      "kind": "number",
+      "unit": "verses",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed reviews push the verse back to the next day. After a week off, new verses pause until older ones are refreshed.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

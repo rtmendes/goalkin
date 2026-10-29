@@ -1,0 +1,142 @@
+{
+  "id": "debt-payoff",
+  "name": "Debt payoff",
+  "area": "Wealth",
+  "tier": "Premium",
+  "price": 29,
+  "summary": "Pay down debts one at a time in the order you choose, smallest balance or highest rate first, with projected payoff dates.",
+  "duration": "Set by your debts and extra payment",
+  "onboarding": [
+    {
+      "id": "debts",
+      "prompt": "List each debt: a nickname, balance, interest rate and minimum payment.",
+      "type": "text",
+      "reaction": "Thanks. Writing it down is a brave first step."
+    },
+    {
+      "id": "extra",
+      "prompt": "How much extra can you put toward debt each month?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Any extra speeds things up."
+    },
+    {
+      "id": "method",
+      "prompt": "Which order feels right?",
+      "type": "choice",
+      "options": [
+        "Smallest balance first",
+        "Highest interest rate first",
+        "Show me both"
+      ],
+      "reaction": "Good pick. You can switch any time."
+    },
+    {
+      "id": "payday",
+      "prompt": "When do you usually get paid?",
+      "type": "choice",
+      "options": [
+        "Weekly",
+        "Every two weeks",
+        "Twice a month",
+        "Monthly",
+        "It varies"
+      ],
+      "reaction": "Payments line up after payday."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap a time each month for a 15-minute money check.",
+      "type": "calendar_slots",
+      "reaction": "Monthly check set."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Get clear",
+        "weeks": "1-2",
+        "benchmarks": [
+          "All debts listed with due dates"
+        ],
+        "actions": [
+          "Confirm balances and due dates",
+          "Set minimums to automatic where possible",
+          "Pick payoff order"
+        ]
+      },
+      {
+        "name": "First win",
+        "weeks": "3-16",
+        "benchmarks": [
+          "First debt closed"
+        ],
+        "actions": [
+          "Minimums on all debts",
+          "Extra goes to the target debt",
+          "Monthly check-in"
+        ]
+      },
+      {
+        "name": "Roll it forward",
+        "weeks": "17-104",
+        "benchmarks": [
+          "Each next debt closed"
+        ],
+        "actions": [
+          "Freed-up payment rolls to the next debt",
+          "Quarterly re-check of rates and order"
+        ]
+      }
+    ],
+    "calendar": "Due-date reminders for each minimum, a monthly money check at the chosen slot, and projected payoff dates for each debt (recalculated as you log balances)."
+  },
+  "approach_variants": {
+    "habit": "Same monthly routine: log balances, pay extra, done; streak of months on plan.",
+    "willpower": "Debt-free countdown with a challenge to find extra each month.",
+    "time": "Every payment and review is a calendar block; monthly review of time and amounts.",
+    "reward": "Owner-chosen low-cost reward each time a debt closes.",
+    "resource": "First week gathers statements, due dates and log-ins in one safe place (not in GoalKin)."
+  },
+  "tracked_fields": [
+    {
+      "id": "balance",
+      "label": "Balance per debt",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    },
+    {
+      "id": "debts_closed",
+      "label": "Debts closed",
+      "kind": "number",
+      "unit": "debts",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "extra_paid",
+      "label": "Extra paid this month",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "This plan is general education, not financial advice. Check big decisions with a qualified professional.",
+    "Account numbers and log-ins are never asked for; you enter only the totals you choose.",
+    "If you're behind on payments or contacted by collectors, a nonprofit credit counselor can help you review options.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A month without extra payments keeps minimums going and moves payoff dates out; nothing resets. A missed minimum prompts a quick checklist (pay as soon as possible, ask the lender about late fees) and a re-plan of the next month.",
+  "addon_tracks": [
+    "Suggested: Money Conversations for Couples"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 29,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "id": "no-spend-month",
+  "name": "No-spend month",
+  "area": "Wealth",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Run a no-spend month with daily check-ins, swap ideas for the categories you choose and an end-of-month review.",
+  "duration": "30 days",
+  "onboarding": [
+    {
+      "id": "start",
+      "prompt": "When does your no-spend month start?",
+      "type": "date",
+      "reaction": "Day one is on the calendar."
+    },
+    {
+      "id": "off_limits",
+      "prompt": "Which categories are off-limits?",
+      "type": "multi_choice",
+      "options": [
+        "Eating out and takeout",
+        "Coffee shops",
+        "Clothes",
+        "Online shopping",
+        "Entertainment",
+        "Hobbies"
+      ],
+      "reaction": "Bold. We'll have swaps ready."
+    },
+    {
+      "id": "allowed",
+      "prompt": "What spending is still allowed (bills, groceries, gas)?",
+      "type": "text",
+      "reaction": "Good. Essentials stay essential."
+    },
+    {
+      "id": "why",
+      "prompt": "What will you do with the money you keep?",
+      "type": "text",
+      "reaction": "Love a purpose. It shows up on hard days.",
+      "optional": true
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap an evening time for a 30-second check-in.",
+      "type": "calendar_slots",
+      "reaction": "Check-in set. Tap yes or no each night."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Prep",
+        "weeks": "1",
+        "benchmarks": [
+          "Rules written down",
+          "Pantry and calendar checked"
+        ],
+        "actions": [
+          "List allowed and off-limits spending",
+          "Unsubscribe from shop emails",
+          "Plan free activities"
+        ]
+      },
+      {
+        "name": "The month",
+        "weeks": "2-4",
+        "benchmarks": [
+          "No-spend days logged most nights"
+        ],
+        "actions": [
+          "Daily check-in",
+          "Swap ideas for each off-limits category",
+          "Weekly mini review"
+        ]
+      },
+      {
+        "name": "Review",
+        "weeks": "5",
+        "benchmarks": [
+          "End-of-month review done"
+        ],
+        "actions": [
+          "Total money kept",
+          "Decide what to keep doing"
+        ]
+      }
+    ],
+    "calendar": "A nightly 30-second check-in at the chosen slot, a weekly mini review, and an end-of-month review session."
+  },
+  "approach_variants": {
+    "habit": "Nightly check-in tied to an existing routine; no-spend streak.",
+    "willpower": "30-day challenge with dares from partners for free fun.",
+    "time": "Free activities planned as calendar blocks for weekends.",
+    "reward": "Part of the money kept goes to an owner-chosen reward at the end.",
+    "resource": "Prep week gathers free options: library, parks, recipes from the pantry."
+  },
+  "tracked_fields": [
+    {
+      "id": "no_spend_days",
+      "label": "No-spend days",
+      "kind": "number",
+      "unit": "days",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "money_kept",
+      "label": "Money kept",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "This plan is general education, not financial advice. Check big decisions with a qualified professional.",
+    "Essentials like food, medicine, rent and bills are never off-limits.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A spend day is logged privately and the month continues; there is no reset. Three spend days in a row prompt a quick check on whether the rules need adjusting.",
+  "addon_tracks": [
+    "Suggested: Pantry Meals Recipe Pack"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

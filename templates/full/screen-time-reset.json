@@ -1,0 +1,122 @@
+{
+  "id": "screen-time-reset",
+  "name": "Screen-time reset",
+  "area": "Learning and growth",
+  "tier": "Premium",
+  "price": 14,
+  "summary": "Step down your screen time week by week, with swap activities for the apps that pull hardest.",
+  "duration": "6 weeks",
+  "onboarding": [
+    {
+      "id": "hours_now",
+      "prompt": "Daily screen hours now (outside work)?",
+      "type": "slider",
+      "min": 0,
+      "max": 12,
+      "reaction": "Thanks for checking. That's the baseline."
+    },
+    {
+      "id": "target",
+      "prompt": "Daily target?",
+      "type": "slider",
+      "min": 0,
+      "max": 8,
+      "reaction": "Good target. We'll step down gradually."
+    },
+    {
+      "id": "apps",
+      "prompt": "Which apps pull hardest?",
+      "type": "text",
+      "reaction": "Those get a swap plan."
+    },
+    {
+      "id": "swaps",
+      "prompt": "What would you rather do instead?",
+      "type": "multi_choice",
+      "options": [
+        "Read",
+        "Walk",
+        "Call someone",
+        "Hobby",
+        "Exercise",
+        "Rest"
+      ],
+      "reaction": "Great swaps."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap times for swap activities.",
+      "type": "calendar_slots",
+      "reaction": "Swaps placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Notice",
+        "weeks": "1",
+        "benchmarks": [
+          "Baseline logged"
+        ],
+        "actions": [
+          "Check screen-time report",
+          "Move hardest apps off the home screen"
+        ]
+      },
+      {
+        "name": "Step down",
+        "weeks": "2-5",
+        "benchmarks": [
+          "Daily hours step down each week toward target"
+        ],
+        "actions": [
+          "App limits",
+          "Swap activities on calendar",
+          "Phone-free zones"
+        ]
+      },
+      {
+        "name": "Hold",
+        "weeks": "6",
+        "benchmarks": [
+          "Target reached on most days"
+        ],
+        "actions": [
+          "Keep what works",
+          "Reflection"
+        ]
+      }
+    ],
+    "calendar": "Swap activities on the chosen slots and a weekly check of screen-time numbers."
+  },
+  "approach_variants": {
+    "habit": "Replace one scroll moment a day with a swap; streak.",
+    "willpower": "Weekly step-down challenge.",
+    "time": "Swap activities as calendar blocks.",
+    "reward": "Owner-chosen reward each week the target is hit.",
+    "resource": "First week sets up app limits, a charging spot and swap supplies."
+  },
+  "tracked_fields": [
+    {
+      "id": "hours",
+      "label": "Screen hours per day",
+      "kind": "duration",
+      "unit": "hours",
+      "default_visibility": "chosen"
+    }
+  ],
+  "guardrails": [
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A high day doesn't reset anything; the weekly average counts. A high week repeats that week's target.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 14,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

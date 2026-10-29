@@ -1,0 +1,159 @@
+{
+  "id": "first-1-000-of-side-income",
+  "name": "First $1,000 of side income",
+  "area": "Wealth",
+  "tier": "Premium",
+  "price": 19,
+  "summary": "Work toward a first $1,000 from a side offer by shaping one offer, asking your first 10 people and setting weekly targets.",
+  "duration": "8 to 12 weeks",
+  "onboarding": [
+    {
+      "id": "idea",
+      "prompt": "What skill or idea do you want to offer?",
+      "type": "text",
+      "reaction": "Love it. Let's turn that into one clear offer."
+    },
+    {
+      "id": "hours",
+      "prompt": "Hours a week you can give it?",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "reaction": "Five focused hours goes a long way."
+    },
+    {
+      "id": "deadline",
+      "prompt": "When would you like to reach the first $1,000?",
+      "type": "date",
+      "reaction": "Deadline set. Weekly targets come next."
+    },
+    {
+      "id": "people",
+      "prompt": "Do you know people who might want it?",
+      "type": "choice",
+      "options": [
+        "Yes, a few names come to mind",
+        "Maybe, I'll need to look",
+        "Not yet"
+      ],
+      "reaction": "Great. Your first 10 are closer than you think."
+    },
+    {
+      "id": "rules",
+      "prompt": "Have you checked your job contract and local rules for side work?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "Not yet"
+      ],
+      "reaction": "Worth a look before you start."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your side-project work slots.",
+      "type": "calendar_slots",
+      "reaction": "Work blocks placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Shape the offer",
+        "weeks": "1-2",
+        "benchmarks": [
+          "One-sentence offer written",
+          "Price set",
+          "List of 10 people to ask"
+        ],
+        "actions": [
+          "Write the offer",
+          "Pick a simple way to get paid",
+          "Check job contract and local rules"
+        ]
+      },
+      {
+        "name": "Ask",
+        "weeks": "3-6",
+        "benchmarks": [
+          "10 asks made",
+          "First sale or useful feedback"
+        ],
+        "actions": [
+          "Two to three asks a week",
+          "Follow up once",
+          "Adjust the offer from feedback"
+        ]
+      },
+      {
+        "name": "Repeat",
+        "weeks": "7-12",
+        "benchmarks": [
+          "Working toward $1,000 total",
+          "Process written down"
+        ],
+        "actions": [
+          "Weekly ask target",
+          "Ask happy customers for referrals",
+          "Review hours versus income"
+        ]
+      }
+    ],
+    "calendar": "Work blocks on the chosen slots, weekly ask targets, a follow-up reminder for each ask, and a weekly review."
+  },
+  "approach_variants": {
+    "habit": "Same two work blocks a week; streak of weeks with asks made.",
+    "willpower": "Weekly ask challenge and a countdown to the deadline.",
+    "time": "Every ask, follow-up and delivery is a calendar block; weekly hours review.",
+    "reward": "Owner-chosen reward at first sale and at the $1,000 mark.",
+    "resource": "First week gathers tools: payment method, simple sample, and a list of contacts."
+  },
+  "tracked_fields": [
+    {
+      "id": "asks",
+      "label": "Asks made",
+      "kind": "number",
+      "unit": "asks",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "sales",
+      "label": "Sales",
+      "kind": "number",
+      "unit": "sales",
+      "default_visibility": "private"
+    },
+    {
+      "id": "income",
+      "label": "Income",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    },
+    {
+      "id": "hours",
+      "label": "Hours worked",
+      "kind": "duration",
+      "unit": "hours",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "This plan is general education, not financial advice. Check big decisions with a qualified professional.",
+    "Results depend on your offer, effort and market; this plan sets targets, not outcomes.",
+    "Check your employment contract, tax rules and any licenses your offer needs.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A week with no asks rolls its target into the next two weeks. After two quiet weeks, the plan offers a smaller weekly target or a reshaped offer.",
+  "addon_tracks": [
+    "Suggested: Offer Factory First Offer Kit",
+    "Suggested: Simple Sales Conversations Track"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 19,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

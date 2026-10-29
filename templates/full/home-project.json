@@ -1,0 +1,146 @@
+{
+  "id": "home-project",
+  "name": "Home project",
+  "area": "Home and life",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Plan a home project with tasks in order, a supply list and invites for your helpers.",
+  "duration": "Set by your deadline",
+  "onboarding": [
+    {
+      "id": "project",
+      "prompt": "What's the project?",
+      "type": "text",
+      "reaction": "Let's break it down."
+    },
+    {
+      "id": "budget",
+      "prompt": "Budget?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Kept private.",
+      "optional": true
+    },
+    {
+      "id": "deadline",
+      "prompt": "Done by?",
+      "type": "date",
+      "reaction": "Deadline set."
+    },
+    {
+      "id": "helpers",
+      "prompt": "Helpers?",
+      "type": "text",
+      "reaction": "Invites ready.",
+      "optional": true
+    },
+    {
+      "id": "pro",
+      "prompt": "Does any part need a licensed pro (electrical, gas, structural)?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "No",
+        "Not sure"
+      ],
+      "reaction": "We'll add a booking step if so."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your work sessions.",
+      "type": "calendar_slots",
+      "reaction": "Sessions placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Plan",
+        "weeks": "1",
+        "benchmarks": [
+          "Task list in order",
+          "Supply list"
+        ],
+        "actions": [
+          "Measure and plan",
+          "Check permits",
+          "Book pros if needed"
+        ]
+      },
+      {
+        "name": "Gather",
+        "weeks": "2",
+        "benchmarks": [
+          "Supplies bought"
+        ],
+        "actions": [
+          "Shopping trip",
+          "Helper invites"
+        ]
+      },
+      {
+        "name": "Build",
+        "weeks": "3-8",
+        "benchmarks": [
+          "Tasks done in order"
+        ],
+        "actions": [
+          "Work sessions",
+          "Weekly check"
+        ]
+      },
+      {
+        "name": "Finish",
+        "weeks": "9",
+        "benchmarks": [
+          "Project done"
+        ],
+        "actions": [
+          "Clean-up",
+          "Photos",
+          "Thank helpers"
+        ]
+      }
+    ],
+    "calendar": "Work sessions on the chosen slots, a supply run, helper invites, and the deadline."
+  },
+  "approach_variants": {
+    "habit": "Short sessions on the same days each week; streak of sessions done.",
+    "willpower": "Weekend sprint challenge to finish a big chunk, with a countdown to the deadline.",
+    "time": "Every task becomes a calendar block in order; weekly review of time and tasks left.",
+    "reward": "Owner-chosen reward at halfway and when the project is done.",
+    "resource": "First week gathers tools, supplies, quotes and helpers before any work starts."
+  },
+  "tracked_fields": [
+    {
+      "id": "tasks",
+      "label": "Tasks done",
+      "kind": "number",
+      "unit": "tasks",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "spent",
+      "label": "Spent",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "For lifting, ladders, power tools or electrical and gas work, use proper safety gear and hire a licensed professional where required.",
+    "Check local permit rules before structural, electrical or plumbing work.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "Missed sessions push tasks back in order; if the deadline is at risk, the plan suggests more helpers or a new date.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "launch-a-side-project",
+  "name": "Launch a side project",
+  "area": "Work and career",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Take a side project from idea to first customer with milestones paced to the hours you have.",
+  "duration": "8 to 16 weeks",
+  "onboarding": [
+    {
+      "id": "idea",
+      "prompt": "What's the idea, in one sentence?",
+      "type": "text",
+      "reaction": "Love it. One sentence is a strong start."
+    },
+    {
+      "id": "launch",
+      "prompt": "When do you want to launch?",
+      "type": "date",
+      "reaction": "Launch day is on the calendar."
+    },
+    {
+      "id": "hours",
+      "prompt": "Hours a week you can give it?",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "reaction": "That's enough to ship something real."
+    },
+    {
+      "id": "stage",
+      "prompt": "Where is it now?",
+      "type": "choice",
+      "options": [
+        "Just an idea",
+        "Some sketches or notes",
+        "A rough version exists"
+      ],
+      "reaction": "Great. We'll start from there."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your build slots.",
+      "type": "calendar_slots",
+      "reaction": "Build blocks placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Shape",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Who it's for and what it does, written down",
+          "5 people asked if they'd want it"
+        ],
+        "actions": [
+          "Write the one-page plan",
+          "Talk to 5 potential users"
+        ]
+      },
+      {
+        "name": "Build",
+        "weeks": "3-8",
+        "benchmarks": [
+          "Smallest useful version ready"
+        ],
+        "actions": [
+          "Weekly build blocks",
+          "Share progress with chosen people"
+        ]
+      },
+      {
+        "name": "Launch",
+        "weeks": "9-12",
+        "benchmarks": [
+          "Launched",
+          "First customer or user"
+        ],
+        "actions": [
+          "Launch post or message",
+          "Ask 10 people directly",
+          "Collect feedback"
+        ]
+      },
+      {
+        "name": "Learn",
+        "weeks": "13-16",
+        "benchmarks": [
+          "Next version decided"
+        ],
+        "actions": [
+          "Review what worked",
+          "Plan next milestones"
+        ]
+      }
+    ],
+    "calendar": "Build blocks on the chosen slots, a milestone check each Friday, and launch day. Phases stretch or shrink with the launch date."
+  },
+  "approach_variants": {
+    "habit": "Small build session on the same days each week; streak of weeks shipped.",
+    "willpower": "Launch countdown with a public milestone feed for those who opt in.",
+    "time": "Every build task is a calendar block; weekly hours review.",
+    "reward": "Owner-chosen rewards at each milestone.",
+    "resource": "First week gathers tools, domain, accounts and a helper or two."
+  },
+  "tracked_fields": [
+    {
+      "id": "milestones",
+      "label": "Milestones done",
+      "kind": "number",
+      "unit": "milestones",
+      "default_visibility": "public"
+    },
+    {
+      "id": "hours",
+      "label": "Hours",
+      "kind": "duration",
+      "unit": "hours",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "This plan sets milestones; results depend on your project and market.",
+    "Check your employment contract about side projects.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A missed week moves the next milestone a week out. If launch is within two weeks and the build isn't ready, the plan offers a smaller launch or a new date.",
+  "addon_tracks": [
+    "Suggested: Offer Factory Business Starter Kit",
+    "Suggested: Launch Week Checklist Track"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

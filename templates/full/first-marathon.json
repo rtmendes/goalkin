@@ -1,0 +1,185 @@
+{
+  "id": "first-marathon",
+  "name": "First marathon",
+  "area": "Health",
+  "tier": "Creator",
+  "price": 29,
+  "summary": "Train for a first marathon with a 16 to 20-week plan of long runs, cutback weeks and a taper.",
+  "duration": "16 to 20 weeks",
+  "onboarding": [
+    {
+      "id": "race_date",
+      "prompt": "When's the marathon?",
+      "type": "date",
+      "reaction": "That's the big one. We'll count back from race day."
+    },
+    {
+      "id": "miles_now",
+      "prompt": "About how many miles a week are you running now?",
+      "type": "slider",
+      "min": 0,
+      "max": 50,
+      "reaction": "Whatever the number, that's your base."
+    },
+    {
+      "id": "injuries",
+      "prompt": "Any injuries or niggles we should plan around?",
+      "type": "text",
+      "reaction": "Thanks for flagging it. Check it with your doctor or physio before the build.",
+      "optional": true
+    },
+    {
+      "id": "long_day",
+      "prompt": "Which day works for long runs?",
+      "type": "choice",
+      "options": [
+        "Saturday",
+        "Sunday",
+        "Friday",
+        "Another weekday"
+      ],
+      "reaction": "Long-run day set. Everything else fits around it."
+    },
+    {
+      "id": "runs_per_week",
+      "prompt": "How many runs a week can you fit?",
+      "type": "choice",
+      "options": [
+        "3",
+        "4",
+        "5"
+      ],
+      "reaction": "Good. Quality beats quantity on a first marathon."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your free running slots, including the long-run window.",
+      "type": "calendar_slots",
+      "reaction": "Calendar holds placed. Long runs get the biggest block."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Base",
+        "weeks": "1-6",
+        "benchmarks": [
+          "Run the planned days for 4 of 6 weeks",
+          "Long run reaches about 10 miles or 16 km"
+        ],
+        "actions": [
+          "Easy runs on most days",
+          "Long run grows slowly",
+          "Cutback week every third or fourth week"
+        ]
+      },
+      {
+        "name": "Build",
+        "weeks": "7-14",
+        "benchmarks": [
+          "Long run reaches 16 to 18 miles or 26 to 29 km",
+          "Practice race-day fuel and kit on long runs"
+        ],
+        "actions": [
+          "One steady or tempo run a week",
+          "Long run on the chosen day",
+          "Cutback weeks kept"
+        ]
+      },
+      {
+        "name": "Peak",
+        "weeks": "15-17",
+        "benchmarks": [
+          "One peak long run completed"
+        ],
+        "actions": [
+          "Highest-mileage weeks of the plan",
+          "Race-pace segments inside long runs"
+        ]
+      },
+      {
+        "name": "Taper and race",
+        "weeks": "18-20",
+        "benchmarks": [
+          "Mileage steps down over 2 to 3 weeks",
+          "Race day"
+        ],
+        "actions": [
+          "Short, easy runs",
+          "Race-week checklist: kit, route, fuel, sleep",
+          "Recovery week after the race"
+        ]
+      }
+    ],
+    "calendar": "Runs on the chosen slots, the long run on the chosen day, cutback weeks marked, taper weeks shaded lighter, and race day as an all-day event. Plan length (16 to 20 weeks) is set from the race date and current miles."
+  },
+  "approach_variants": {
+    "habit": "Same days and times every week; streak counts weeks with all planned runs done.",
+    "willpower": "Long-run countdown and peak-week challenge; partners can send a dare for the toughest long run.",
+    "time": "Every run, stretch and foam-roll session is a calendar block; weekly hours review.",
+    "reward": "Owner-picked rewards at the first 13-mile run, the peak long run and the finish line.",
+    "resource": "Opening week sorts shoes, fuel to test, a long-run route, and a running club or buddy."
+  },
+  "tracked_fields": [
+    {
+      "id": "weekly_miles",
+      "label": "Weekly miles",
+      "kind": "number",
+      "unit": "miles or km",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "long_run",
+      "label": "Long run",
+      "kind": "number",
+      "unit": "miles or km",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "missed_runs",
+      "label": "Missed runs",
+      "kind": "number",
+      "unit": "runs",
+      "default_visibility": "private"
+    },
+    {
+      "id": "weight",
+      "label": "Body weight (optional)",
+      "kind": "number",
+      "unit": "lb or kg",
+      "default_visibility": "private"
+    },
+    {
+      "id": "how_felt",
+      "label": "How the long run felt",
+      "kind": "rating",
+      "unit": "1 to 5",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Talk to your doctor before starting. GoalKin offers education, not medical advice.",
+    "Pain that changes how you run means rest and get it checked; the plan will wait.",
+    "Extra care on hot days: slow down, drink water and shorten the run if needed.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A missed easy run is dropped. A missed long run moves to the next free day that week, or the week repeats. Missing 10 days or more triggers a re-plan with a cutback week first; if the race date gets too close, the plan suggests a later race or a shorter distance.",
+  "addon_tracks": [
+    "Suggested: Marathon Fueling Basics",
+    "Suggested: Strength for Runners Track"
+  ],
+  "creator": {
+    "id": "goalkin",
+    "revenue_share": 0.7,
+    "license": "GoalKin launch template; replaced when a creator version is approved"
+  },
+  "price_log": [
+    {
+      "from": null,
+      "to": 29,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "id": "meal-prep-rhythm",
+  "name": "Meal prep rhythm",
+  "area": "Home and life",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Set up a weekly meal-prep rhythm with a menu, a shopping list and a prep day that fits your household.",
+  "duration": "6 weeks, then ongoing",
+  "onboarding": [
+    {
+      "id": "people",
+      "prompt": "How many people are you feeding?",
+      "type": "number",
+      "min": 1,
+      "max": 12,
+      "reaction": "Got it. Portions will match."
+    },
+    {
+      "id": "nights",
+      "prompt": "Which nights will you cook?",
+      "type": "multi_choice",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "reaction": "Cooking nights set."
+    },
+    {
+      "id": "diet",
+      "prompt": "Any diet needs or allergies?",
+      "type": "multi_choice",
+      "options": [
+        "None",
+        "Vegetarian",
+        "Vegan",
+        "Gluten-free",
+        "Dairy-free",
+        "Nut allergy",
+        "Doctor-advised diet"
+      ],
+      "reaction": "Noted. Recipes will respect them."
+    },
+    {
+      "id": "prep_day",
+      "prompt": "Which day for prep?",
+      "type": "choice",
+      "options": [
+        "Saturday",
+        "Sunday",
+        "A weeknight"
+      ],
+      "reaction": "Prep day set."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your prep and shopping slots.",
+      "type": "calendar_slots",
+      "reaction": "Placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Start simple",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Two prep days done"
+        ],
+        "actions": [
+          "Weekly menu with 3 to 4 dinners",
+          "Shopping list"
+        ]
+      },
+      {
+        "name": "Rhythm",
+        "weeks": "3-6",
+        "benchmarks": [
+          "Planned meals cooked most weeks"
+        ],
+        "actions": [
+          "Rotate favourite meals",
+          "Prep day"
+        ]
+      }
+    ],
+    "calendar": "A shopping slot, a prep day, and cooking nights with that night's meal in the event notes."
+  },
+  "approach_variants": {
+    "habit": "Same prep day every week, paired with a favourite playlist; streak of prep days kept.",
+    "willpower": "Challenge: a full week of home-cooked dinners with a countdown.",
+    "time": "Menu planning, shopping and prep each get a calendar block; weekly time review.",
+    "reward": "Owner-chosen non-food treat after each month of prep days.",
+    "resource": "First week stocks containers, pantry staples and a short list of go-to recipes."
+  },
+  "tracked_fields": [
+    {
+      "id": "meals",
+      "label": "Meals cooked",
+      "kind": "number",
+      "unit": "meals",
+      "default_visibility": "chosen"
+    }
+  ],
+  "guardrails": [
+    "Talk to your doctor before starting. GoalKin offers education, not medical advice.",
+    "Recipes and menus are suggestions, not medical nutrition advice. For a doctor-advised diet, follow your clinician's guidance.",
+    "Always check ingredients for allergies.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed prep day shifts to an easy-meals week. Missed cooking nights roll to leftovers.",
+  "addon_tracks": [
+    "Suggested: Simple Weeknight Meals Track"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

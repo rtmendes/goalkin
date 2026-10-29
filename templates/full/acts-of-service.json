@@ -1,0 +1,115 @@
+{
+  "id": "acts-of-service",
+  "name": "Acts of service",
+  "area": "Relationships",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Serve the people around you with a weekly list of ideas and calendar reminders.",
+  "duration": "8 weeks, then ongoing",
+  "onboarding": [
+    {
+      "id": "who",
+      "prompt": "Who would you like to serve?",
+      "type": "multi_choice",
+      "options": [
+        "Family",
+        "Friends",
+        "Neighbours",
+        "Coworkers",
+        "Church or community",
+        "Strangers"
+      ],
+      "reaction": "Lovely. Ideas will fit each one."
+    },
+    {
+      "id": "time",
+      "prompt": "Time per week (minutes)?",
+      "type": "slider",
+      "min": 10,
+      "max": 180,
+      "reaction": "Small acts add up."
+    },
+    {
+      "id": "style",
+      "prompt": "What kinds of help do you enjoy?",
+      "type": "multi_choice",
+      "options": [
+        "Cooking",
+        "Errands",
+        "Notes and messages",
+        "Fixing things",
+        "Listening"
+      ],
+      "reaction": "Great mix."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap times for weekly acts.",
+      "type": "calendar_slots",
+      "reaction": "Reminders set."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Start",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Two acts done"
+        ],
+        "actions": [
+          "Weekly idea list",
+          "One small act each week"
+        ]
+      },
+      {
+        "name": "Grow",
+        "weeks": "3-8",
+        "benchmarks": [
+          "Weekly act most weeks"
+        ],
+        "actions": [
+          "Rotate who you serve",
+          "One bigger act a month"
+        ]
+      }
+    ],
+    "calendar": "A weekly reminder at the chosen slot with three ideas to pick from."
+  },
+  "approach_variants": {
+    "habit": "One act a week on the same day; streak.",
+    "willpower": "Monthly challenge: an act for someone new.",
+    "time": "Acts planned as calendar blocks.",
+    "reward": "Reflection note after each act.",
+    "resource": "First week gathers supplies: cards, stamps, a meal list."
+  },
+  "tracked_fields": [
+    {
+      "id": "acts",
+      "label": "Acts done",
+      "kind": "number",
+      "unit": "acts",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "notes",
+      "label": "Notes",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Names of people you serve stay private by default.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed week simply rolls the ideas forward.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

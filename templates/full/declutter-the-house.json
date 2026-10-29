@@ -1,0 +1,132 @@
+{
+  "id": "declutter-the-house",
+  "name": "Declutter the house",
+  "area": "Home and life",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Declutter room by room on a schedule that fits your sessions, with donate runs along the way.",
+  "duration": "Set by your deadline, often 4 to 12 weeks",
+  "onboarding": [
+    {
+      "id": "rooms",
+      "prompt": "Which rooms are on the list?",
+      "type": "multi_choice",
+      "options": [
+        "Kitchen",
+        "Bedroom",
+        "Closet",
+        "Living room",
+        "Garage",
+        "Kids' rooms",
+        "Bathroom",
+        "Office"
+      ],
+      "reaction": "Good list. We'll go easiest first."
+    },
+    {
+      "id": "minutes",
+      "prompt": "Minutes per session?",
+      "type": "slider",
+      "min": 15,
+      "max": 180,
+      "reaction": "Short sessions keep it fun."
+    },
+    {
+      "id": "deadline",
+      "prompt": "Finish by?",
+      "type": "date",
+      "reaction": "Deadline set.",
+      "optional": true
+    },
+    {
+      "id": "helpers",
+      "prompt": "Anyone helping?",
+      "type": "text",
+      "reaction": "Invites ready.",
+      "optional": true
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your declutter sessions.",
+      "type": "calendar_slots",
+      "reaction": "Sessions placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Quick wins",
+        "weeks": "1-2",
+        "benchmarks": [
+          "First room done",
+          "First donate run"
+        ],
+        "actions": [
+          "Start with the easiest room",
+          "Keep, donate, toss bins"
+        ]
+      },
+      {
+        "name": "Room by room",
+        "weeks": "3-10",
+        "benchmarks": [
+          "One room every one to two weeks"
+        ],
+        "actions": [
+          "Scheduled sessions",
+          "Donate run every other week"
+        ]
+      },
+      {
+        "name": "Finish",
+        "weeks": "11-12",
+        "benchmarks": [
+          "All rooms done"
+        ],
+        "actions": [
+          "Last room",
+          "Maintenance routine",
+          "Celebrate"
+        ]
+      }
+    ],
+    "calendar": "Sessions on the chosen slots labelled by room, and donate runs every other week."
+  },
+  "approach_variants": {
+    "habit": "Fifteen minutes a day after an existing routine (after dinner); streak of days tidied.",
+    "willpower": "Weekend challenge: clear one whole room in a day, with a countdown to the deadline.",
+    "time": "Each room gets named calendar blocks; weekly review of time spent and rooms left.",
+    "reward": "Owner-chosen reward for each room finished and a bigger one when the house is done.",
+    "resource": "First week gathers bins, bags, a donation drop-off with opening times and any helpers."
+  },
+  "tracked_fields": [
+    {
+      "id": "rooms",
+      "label": "Rooms done",
+      "kind": "number",
+      "unit": "rooms",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "bags",
+      "label": "Bags out",
+      "kind": "number",
+      "unit": "bags",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "For lifting, ladders, power tools or electrical and gas work, use proper safety gear and hire a licensed professional where required.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed session moves the room to the next slot. After a missed fortnight, the plan offers shorter sessions.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}
