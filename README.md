@@ -7,6 +7,7 @@ Goal-accountability app: calendar plans, layered sharing, AI-personalized plans 
 - `docs/PRD.md` — product requirements
 - `docs/SOP.md` — build and launch procedure
 - `docs/MARKETPLACE.md` — templates, creators, advanced custom templates
+- `docs/FINANCIAL-MODEL.md` — $260K/month profit model and scenarios
 - `templates/` — launch catalog (44 templates), template schema, full template files
 - `brand/` — logo concepts, word art, landing page draft
 - `TASKS.md` — current status
