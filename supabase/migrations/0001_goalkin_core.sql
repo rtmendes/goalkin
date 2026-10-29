@@ -440,6 +440,8 @@ create policy gk_checkins_owner on gk_check_ins for all using (user_id = auth.ui
   with check (user_id = auth.uid() and gk_owns_goal(goal_id));
 create policy gk_conseq_owner on gk_consequences for all using (gk_owns_goal(goal_id) or set_by = auth.uid())
   with check (set_by = auth.uid());
+-- Owners accept or decline a partner's dare on their own goal.
+create policy gk_conseq_owner_accept on gk_consequences for update using (gk_owns_goal(goal_id)) with check (gk_owns_goal(goal_id));
 
 create policy gk_enc_read on gk_encouragements for select using (from_id = auth.uid() or to_id = auth.uid()
   or (goal_id is not null and gk_owns_goal(goal_id)) or (circle_id is not null and gk_is_circle_member(circle_id)));
