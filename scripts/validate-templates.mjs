@@ -77,7 +77,7 @@ function policy(t, file, errs) {
   const base = path.basename(file, ".json");
   if (t.id !== base) errs.push(`id "${t.id}" does not match file name "${base}.json"`);
 
-  const cat = catalog.templates.find((c) => c.id === t.id);
+  const cat = [...catalog.templates, ...(catalog.programs ?? [])].find((c) => c.id === t.id);
   if (!cat) errs.push(`id "${t.id}" is not in templates/catalog.json`);
   else {
     if (String(t.name).toLowerCase() !== String(cat.name).toLowerCase()) errs.push(`name "${t.name}" differs from catalog "${cat.name}"`);

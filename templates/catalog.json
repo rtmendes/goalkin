@@ -751,5 +751,45 @@
       "default_visibility": "All Pub",
       "tier": "Free"
     }
+  ],
+  "programs": [
+    {
+      "id": "finish-the-year",
+      "area": "Learning and growth",
+      "name": "Finish the Year",
+      "onboarding_inputs": [
+        "Goal",
+        "finish line",
+        "hours a week",
+        "slots"
+      ],
+      "ai_builds": "A six-week sprint from late November to December 31 to finish one goal you started this year, with weekly benchmarks and someone in your corner.",
+      "tracks": [
+        "Sessions",
+        "percent done",
+        "reflection"
+      ],
+      "default_visibility": "All P",
+      "tier": "Premium"
+    },
+    {
+      "id": "new-year-reset",
+      "area": "Learning and growth",
+      "name": "New Year Reset",
+      "onboarding_inputs": [
+        "Goal",
+        "finish line",
+        "hours a week",
+        "slots"
+      ],
+      "ai_builds": "A 31-day January reset to start one 2027 goal with a small first week, weekly benchmarks and partners or a group.",
+      "tracks": [
+        "Sessions",
+        "percent done",
+        "reflection"
+      ],
+      "default_visibility": "All P",
+      "tier": "Premium"
+    }
   ]
 }

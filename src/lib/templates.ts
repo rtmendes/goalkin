@@ -32,7 +32,8 @@ const ROOT = process.cwd();
 
 export async function readCatalog(): Promise<CatalogEntry[]> {
   const raw = await fs.readFile(path.join(ROOT, "templates/catalog.json"), "utf8");
-  return JSON.parse(raw).templates;
+  const parsed = JSON.parse(raw);
+  return [...parsed.templates, ...(parsed.programs ?? [])];
 }
 
 export async function readFullTemplate(id: string): Promise<TemplateBody | null> {

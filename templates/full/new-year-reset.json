@@ -1,0 +1,148 @@
+{
+  "id": "new-year-reset",
+  "name": "New Year Reset",
+  "area": "Learning and growth",
+  "tier": "Premium",
+  "price": 37,
+  "summary": "A 31-day January reset to start one 2027 goal with a small first week, weekly benchmarks and partners or a group.",
+  "duration": "Jan 1 to Jan 31 (31 days)",
+  "onboarding": [
+    {
+      "id": "goal",
+      "prompt": "Which goal are you carrying over the line?",
+      "type": "text",
+      "reaction": "That one. Let's make it real."
+    },
+    {
+      "id": "area",
+      "prompt": "Which area is it in?",
+      "type": "choice",
+      "options": [
+        "Health",
+        "Wealth",
+        "Work and career",
+        "Relationships",
+        "Faith and spirit",
+        "Learning and growth",
+        "Home and life",
+        "Giving and community"
+      ],
+      "reaction": "Got it. We'll use the matching guardrails."
+    },
+    {
+      "id": "finish_line",
+      "prompt": "What will be true by Jan 31 that isn't true today?",
+      "type": "text",
+      "reaction": "Clear finish lines are easier to cross."
+    },
+    {
+      "id": "hours",
+      "prompt": "How many hours a week can you give it?",
+      "type": "slider",
+      "min": 1,
+      "max": 15,
+      "reaction": "We'll only plan the time you give us."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap the times you'll work on it.",
+      "type": "calendar_slots",
+      "reaction": "Locked in on your calendar."
+    },
+    {
+      "id": "buddy",
+      "prompt": "Who's in your corner?",
+      "type": "choice",
+      "options": [
+        "Just me for now",
+        "One partner",
+        "A small group"
+      ],
+      "optional": true
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Clear the path",
+        "weeks": "1",
+        "benchmarks": [
+          "Three days of the two-minute version done"
+        ],
+        "actions": [
+          "Two-minute daily starter",
+          "Pick what to pause to make room"
+        ]
+      },
+      {
+        "name": "Build",
+        "weeks": "2-3",
+        "benchmarks": [
+          "Most planned sessions done two weeks running"
+        ],
+        "actions": [
+          "Planned sessions at full size",
+          "Weekly check-in with your circle"
+        ]
+      },
+      {
+        "name": "Lock it in",
+        "weeks": "4-5",
+        "benchmarks": [
+          "Jan 31 review written and a February plan chosen"
+        ],
+        "actions": [
+          "Planned sessions",
+          "Month-end reflection",
+          "Choose the next template"
+        ]
+      }
+    ],
+    "calendar": "Daily starter in week 1, then sessions at your chosen slots, weekly check-ins and a Jan 31 review."
+  },
+  "approach_variants": {
+    "habit": "A small daily session at the same time, streak tracked through the holidays.",
+    "willpower": "A countdown to Dec 31 with a weekly challenge from your partner.",
+    "time": "Every session is a calendar block; Sunday review of planned vs actual time.",
+    "reward": "A reward you pick for each weekly benchmark and a bigger one at the finish.",
+    "resource": "Week 1 gathers what you need (tools, help, money) before the sprint starts."
+  },
+  "tracked_fields": [
+    {
+      "id": "sessions",
+      "label": "Work sessions done",
+      "kind": "number",
+      "unit": "sessions",
+      "default_visibility": "private"
+    },
+    {
+      "id": "percent",
+      "label": "Percent of what's left done",
+      "kind": "percent",
+      "unit": "%",
+      "default_visibility": "private"
+    },
+    {
+      "id": "reflection",
+      "label": "What moved me forward",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Plans are suggestions. You choose every step and can change or remove any of them.",
+    "Health goals add a 'talk to your doctor' step; money goals carry a not-financial-advice notice. GoalKin offers education, not medical or financial advice."
+  ],
+  "restart_rules": "Miss a day: do the two-minute version tomorrow. Miss three: restart week at half size, no penalty.",
+  "addon_tracks": [
+    "Suggested: a matching 2027 template from the marketplace"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 37,
+      "basis": "Launch program price per docs/PRD.md and docs/DECISIONS.md #8; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}
