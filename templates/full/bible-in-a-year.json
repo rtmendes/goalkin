@@ -1,0 +1,140 @@
+{
+  "id": "bible-in-a-year",
+  "name": "Bible in a Year",
+  "area": "Faith and spirit",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Read the whole Bible in a year with daily readings, catch-up days and a monthly benchmark your circle can cheer.",
+  "duration": "365 days",
+  "onboarding": [
+    {
+      "id": "start",
+      "prompt": "When do you want to start?",
+      "type": "date",
+      "reaction": "A fresh start date. Day one goes on your calendar."
+    },
+    {
+      "id": "minutes",
+      "prompt": "How many minutes a day can you give it?",
+      "type": "slider",
+      "min": 10,
+      "max": 45,
+      "reaction": "About 15 minutes covers a day's reading for most people."
+    },
+    {
+      "id": "order",
+      "prompt": "Which order do you want to read in?",
+      "type": "choice",
+      "options": [
+        "Canonical (Genesis to Revelation)",
+        "Chronological",
+        "Old and New Testament each day"
+      ],
+      "reaction": "Good pick. We'll space the long books so no week feels heavy."
+    },
+    {
+      "id": "translation",
+      "prompt": "Which translation do you read?",
+      "type": "text",
+      "optional": true
+    },
+    {
+      "id": "slot",
+      "prompt": "Tap the time of day you'll read.",
+      "type": "calendar_slots",
+      "reaction": "Locked in. Your reading shows up there every day."
+    },
+    {
+      "id": "with",
+      "prompt": "Reading alone or with someone?",
+      "type": "choice",
+      "options": [
+        "Alone",
+        "With my spouse or family",
+        "With a small group"
+      ]
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Getting started",
+        "weeks": "1-4",
+        "benchmarks": [
+          "Read 4 weeks without missing two days in a row"
+        ],
+        "actions": [
+          "Daily reading",
+          "Sunday catch-up day"
+        ]
+      },
+      {
+        "name": "Steady middle",
+        "weeks": "5-48",
+        "benchmarks": [
+          "Monthly: on schedule or within one catch-up day"
+        ],
+        "actions": [
+          "Daily reading",
+          "Monthly reflection prompt"
+        ]
+      },
+      {
+        "name": "Finish line",
+        "weeks": "49-52",
+        "benchmarks": [
+          "Complete all readings"
+        ],
+        "actions": [
+          "Daily reading",
+          "Year-end reflection and certificate"
+        ]
+      }
+    ],
+    "calendar": "One daily event at the chosen slot; one catch-up block each Sunday."
+  },
+  "approach_variants": {
+    "habit": "Attach reading to an existing daily habit (morning coffee); streaks shown.",
+    "willpower": "Monthly challenge targets and a countdown to the finish.",
+    "time": "Exact calendar block every day; weekly time-spent review.",
+    "reward": "Owner-chosen reward at each quarter milestone.",
+    "resource": "First week sets up the Bible, app or audio version and a reading spot."
+  },
+  "tracked_fields": [
+    {
+      "id": "chapters",
+      "label": "Chapters read",
+      "kind": "number",
+      "unit": "chapters",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "percent",
+      "label": "Percent of plan",
+      "kind": "percent",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "notes",
+      "label": "Reflection notes",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Readings are a schedule; the person can change order, pace and translation at any time."
+  ],
+  "restart_rules": "Missing a day moves that reading to the next Sunday catch-up; missing a week offers a re-plan that spreads the gap over the next month.",
+  "addon_tracks": [
+    "Faith Promises Scripture Response Guide",
+    "Family Scripture Prayer Rhythm"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

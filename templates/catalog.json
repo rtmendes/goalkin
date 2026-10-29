@@ -1,0 +1,755 @@
+{
+  "version": "2026-10-29",
+  "visibility_key": {
+    "P": "private",
+    "C": "chosen people",
+    "Ci": "circle",
+    "Pub": "public"
+  },
+  "tier_key": {
+    "Free": "starter template",
+    "Premium": "paid program (proposed $9-$37)",
+    "Creator": "made and priced by a creator"
+  },
+  "templates": [
+    {
+      "id": "first-5k-10k",
+      "area": "Health",
+      "name": "First 5K / 10K",
+      "onboarding_inputs": [
+        "Race date or \"no race yet\"",
+        "runs per week now",
+        "longest recent run",
+        "days free"
+      ],
+      "ai_builds": "Walk-run or run plan by week, rest days, race-week taper",
+      "tracks": [
+        "Runs done",
+        "distance",
+        "longest run"
+      ],
+      "default_visibility": "Distance Ci; pace P",
+      "tier": "Free"
+    },
+    {
+      "id": "first-marathon",
+      "area": "Health",
+      "name": "First marathon",
+      "onboarding_inputs": [
+        "Race date",
+        "weekly miles now",
+        "injuries",
+        "long-run day"
+      ],
+      "ai_builds": "16 to 20-week plan with long runs, cutback weeks, taper",
+      "tracks": [
+        "Weekly miles",
+        "long run",
+        "missed runs"
+      ],
+      "default_visibility": "Miles Ci; weight P",
+      "tier": "Creator"
+    },
+    {
+      "id": "steady-weight-change",
+      "area": "Health",
+      "name": "Steady weight change",
+      "onboarding_inputs": [
+        "Target change and date",
+        "current routine",
+        "foods you won't give up"
+      ],
+      "ai_builds": "Weekly habit targets (meals, steps, sleep), not crash rules",
+      "tracks": [
+        "Habits hit",
+        "weigh-ins (optional)"
+      ],
+      "default_visibility": "Weight P; habits C",
+      "tier": "Premium"
+    },
+    {
+      "id": "strength-3-a-week",
+      "area": "Health",
+      "name": "Strength 3\u00d7 a week",
+      "onboarding_inputs": [
+        "Equipment at home or gym",
+        "experience",
+        "minutes per session"
+      ],
+      "ai_builds": "Progressive routine, which days, deload weeks",
+      "tracks": [
+        "Sessions",
+        "lifts",
+        "minutes"
+      ],
+      "default_visibility": "Sessions Ci; lifts P",
+      "tier": "Free"
+    },
+    {
+      "id": "sleep-reset",
+      "area": "Health",
+      "name": "Sleep reset",
+      "onboarding_inputs": [
+        "Bedtime now",
+        "wake time needed",
+        "screens in bed"
+      ],
+      "ai_builds": "Wind-down routine, light and caffeine cutoffs, 14-night ramp",
+      "tracks": [
+        "Bedtime",
+        "wake time",
+        "how rested 1 to 5"
+      ],
+      "default_visibility": "All P",
+      "tier": "Free"
+    },
+    {
+      "id": "daily-steps",
+      "area": "Health",
+      "name": "Daily steps",
+      "onboarding_inputs": [
+        "Average steps now",
+        "target",
+        "walk buddy?"
+      ],
+      "ai_builds": "Weekly step ramp, walk slots on calendar",
+      "tracks": [
+        "Steps per day"
+      ],
+      "default_visibility": "Steps Ci",
+      "tier": "Free"
+    },
+    {
+      "id": "alcohol-free-month",
+      "area": "Health",
+      "name": "Alcohol-free month",
+      "onboarding_inputs": [
+        "Start date",
+        "usual drinking nights",
+        "social events coming"
+      ],
+      "ai_builds": "Night-by-night plan, swap drinks, event scripts",
+      "tracks": [
+        "Alcohol-free days",
+        "cravings 1 to 5"
+      ],
+      "default_visibility": "Streak C; notes P",
+      "tier": "Premium"
+    },
+    {
+      "id": "emergency-fund",
+      "area": "Wealth",
+      "name": "Emergency fund",
+      "onboarding_inputs": [
+        "Target amount (or months of expenses)",
+        "monthly room to save",
+        "payday"
+      ],
+      "ai_builds": "Auto-transfer schedule, milestone dates",
+      "tracks": [
+        "Amount saved",
+        "% to target"
+      ],
+      "default_visibility": "Amount P; % C",
+      "tier": "Free"
+    },
+    {
+      "id": "debt-payoff",
+      "area": "Wealth",
+      "name": "Debt payoff",
+      "onboarding_inputs": [
+        "Each debt's balance, rate, minimum",
+        "extra per month"
+      ],
+      "ai_builds": "Payoff order (smallest first or highest rate first, user picks), payoff dates",
+      "tracks": [
+        "Balance per debt",
+        "debts closed"
+      ],
+      "default_visibility": "Balances P; debts closed C",
+      "tier": "Premium"
+    },
+    {
+      "id": "save-for-a-big-goal",
+      "area": "Wealth",
+      "name": "Save for a big goal",
+      "onboarding_inputs": [
+        "What (trip, car, down payment)",
+        "amount",
+        "deadline"
+      ],
+      "ai_builds": "Monthly target, cut-or-earn options to close the gap",
+      "tracks": [
+        "Saved",
+        "% to goal"
+      ],
+      "default_visibility": "% Ci; amount P",
+      "tier": "Free"
+    },
+    {
+      "id": "no-spend-month",
+      "area": "Wealth",
+      "name": "No-spend month",
+      "onboarding_inputs": [
+        "Start date",
+        "categories off-limits",
+        "allowed spending"
+      ],
+      "ai_builds": "Daily check-in, swap ideas, end-of-month review",
+      "tracks": [
+        "No-spend days",
+        "money kept"
+      ],
+      "default_visibility": "Streak Ci; amounts P",
+      "tier": "Free"
+    },
+    {
+      "id": "first-1-000-of-side-income",
+      "area": "Wealth",
+      "name": "First $1,000 of side income",
+      "onboarding_inputs": [
+        "Skill or idea",
+        "hours per week",
+        "deadline"
+      ],
+      "ai_builds": "First offer, first 10 people to ask, weekly targets",
+      "tracks": [
+        "Asks made",
+        "sales",
+        "income"
+      ],
+      "default_visibility": "Asks Ci; income P",
+      "tier": "Premium"
+    },
+    {
+      "id": "year-end-money-review",
+      "area": "Wealth",
+      "name": "Year-end money review",
+      "onboarding_inputs": [
+        "Accounts to check",
+        "household members"
+      ],
+      "ai_builds": "Two-session review agenda, next-year targets",
+      "tracks": [
+        "Sessions done",
+        "targets set"
+      ],
+      "default_visibility": "All C (partner)",
+      "tier": "Free"
+    },
+    {
+      "id": "career-switch",
+      "area": "Work and career",
+      "name": "Career switch",
+      "onboarding_inputs": [
+        "Current role",
+        "target role",
+        "hours per week",
+        "deadline"
+      ],
+      "ai_builds": "Skill gaps, portfolio pieces, outreach targets by week",
+      "tracks": [
+        "Applications",
+        "conversations",
+        "pieces done"
+      ],
+      "default_visibility": "Counts C; target companies P",
+      "tier": "Premium"
+    },
+    {
+      "id": "ask-for-a-raise",
+      "area": "Work and career",
+      "name": "Ask for a raise",
+      "onboarding_inputs": [
+        "Current pay (optional)",
+        "review date",
+        "wins so far"
+      ],
+      "ai_builds": "Evidence log, rehearsal sessions, the ask script",
+      "tracks": [
+        "Wins logged",
+        "rehearsals"
+      ],
+      "default_visibility": "All P",
+      "tier": "Premium"
+    },
+    {
+      "id": "launch-a-side-project",
+      "area": "Work and career",
+      "name": "Launch a side project",
+      "onboarding_inputs": [
+        "The idea",
+        "launch date",
+        "hours per week"
+      ],
+      "ai_builds": "Milestones from idea to first customer",
+      "tracks": [
+        "Milestones",
+        "hours"
+      ],
+      "default_visibility": "Milestones Pub; hours Ci",
+      "tier": "Free"
+    },
+    {
+      "id": "learn-a-skill-or-certification",
+      "area": "Work and career",
+      "name": "Learn a skill or certification",
+      "onboarding_inputs": [
+        "Skill",
+        "exam or demo date",
+        "study time"
+      ],
+      "ai_builds": "Study schedule, practice tests, review days",
+      "tracks": [
+        "Hours",
+        "practice scores"
+      ],
+      "default_visibility": "Hours Ci; scores P",
+      "tier": "Free"
+    },
+    {
+      "id": "finish-the-book",
+      "area": "Work and career",
+      "name": "Finish the book",
+      "onboarding_inputs": [
+        "Target words",
+        "deadline",
+        "writing days"
+      ],
+      "ai_builds": "Weekly word targets, revision stop rule",
+      "tracks": [
+        "Words",
+        "sessions"
+      ],
+      "default_visibility": "Streak Ci; words C",
+      "tier": "Free"
+    },
+    {
+      "id": "deep-work-habit",
+      "area": "Work and career",
+      "name": "Deep work habit",
+      "onboarding_inputs": [
+        "Best hours",
+        "distractions",
+        "focus goal per week"
+      ],
+      "ai_builds": "Focus blocks on calendar, focus-room invites",
+      "tracks": [
+        "Focus hours",
+        "rounds"
+      ],
+      "default_visibility": "Hours Ci",
+      "tier": "Free"
+    },
+    {
+      "id": "weekly-date-night",
+      "area": "Relationships",
+      "name": "Weekly date night",
+      "onboarding_inputs": [
+        "Budget per date",
+        "nights free",
+        "what you both enjoy"
+      ],
+      "ai_builds": "A year of date ideas by season, calendar holds",
+      "tracks": [
+        "Dates done",
+        "how it felt 1 to 5"
+      ],
+      "default_visibility": "All C (partner)",
+      "tier": "Premium"
+    },
+    {
+      "id": "phone-free-family-dinners",
+      "area": "Relationships",
+      "name": "Phone-free family dinners",
+      "onboarding_inputs": [
+        "Nights per week",
+        "ages of kids",
+        "who cooks"
+      ],
+      "ai_builds": "Rotation, conversation prompts by age",
+      "tracks": [
+        "Dinners held"
+      ],
+      "default_visibility": "Count Ci (family)",
+      "tier": "Free"
+    },
+    {
+      "id": "reconnect-with-friends",
+      "area": "Relationships",
+      "name": "Reconnect with friends",
+      "onboarding_inputs": [
+        "Names (optional)",
+        "how often",
+        "preferred way (call, coffee)"
+      ],
+      "ai_builds": "Rotation so no one goes 30 days without contact",
+      "tracks": [
+        "Contacts made"
+      ],
+      "default_visibility": "All P",
+      "tier": "Free"
+    },
+    {
+      "id": "co-parenting-rhythm",
+      "area": "Relationships",
+      "name": "Co-parenting rhythm",
+      "onboarding_inputs": [
+        "Schedule pattern",
+        "shared decisions",
+        "tone"
+      ],
+      "ai_builds": "Handoff checklist, monthly check-in agenda",
+      "tracks": [
+        "Check-ins held"
+      ],
+      "default_visibility": "All C (co-parent)",
+      "tier": "Creator"
+    },
+    {
+      "id": "hard-conversation-prep",
+      "area": "Relationships",
+      "name": "Hard conversation prep",
+      "onboarding_inputs": [
+        "Who",
+        "topic",
+        "deadline"
+      ],
+      "ai_builds": "Prep steps, opening lines, follow-up plan",
+      "tracks": [
+        "Steps done"
+      ],
+      "default_visibility": "All P",
+      "tier": "Premium"
+    },
+    {
+      "id": "acts-of-service",
+      "area": "Relationships",
+      "name": "Acts of service",
+      "onboarding_inputs": [
+        "Who to serve",
+        "time per week"
+      ],
+      "ai_builds": "Weekly idea list, calendar reminders",
+      "tracks": [
+        "Acts done"
+      ],
+      "default_visibility": "Count Ci",
+      "tier": "Free"
+    },
+    {
+      "id": "bible-in-a-year",
+      "area": "Faith and spirit",
+      "name": "Bible in a year",
+      "onboarding_inputs": [
+        "Start date",
+        "minutes per day",
+        "canonical or chronological",
+        "translation"
+      ],
+      "ai_builds": "Daily readings, catch-up days, monthly benchmark",
+      "tracks": [
+        "Chapters read",
+        "% of plan"
+      ],
+      "default_visibility": "% Ci; notes P",
+      "tier": "Free"
+    },
+    {
+      "id": "prayer-rhythm",
+      "area": "Faith and spirit",
+      "name": "Prayer rhythm",
+      "onboarding_inputs": [
+        "Times of day",
+        "prayer list topics",
+        "with family?"
+      ],
+      "ai_builds": "Daily prompts, weekly theme, answered-prayer log",
+      "tracks": [
+        "Days prayed"
+      ],
+      "default_visibility": "Streak C; list P",
+      "tier": "Free"
+    },
+    {
+      "id": "scripture-memory",
+      "area": "Faith and spirit",
+      "name": "Scripture memory",
+      "onboarding_inputs": [
+        "Verses or theme",
+        "verses per week"
+      ],
+      "ai_builds": "Review schedule with spaced repetition",
+      "tracks": [
+        "Verses memorized"
+      ],
+      "default_visibility": "Count Ci",
+      "tier": "Free"
+    },
+    {
+      "id": "sabbath-and-rest",
+      "area": "Faith and spirit",
+      "name": "Sabbath and rest",
+      "onboarding_inputs": [
+        "Rest day",
+        "what rest means to you"
+      ],
+      "ai_builds": "Prep checklist the day before, rest-day plan",
+      "tracks": [
+        "Rest days kept"
+      ],
+      "default_visibility": "All P",
+      "tier": "Free"
+    },
+    {
+      "id": "gratitude-journal",
+      "area": "Faith and spirit",
+      "name": "Gratitude journal",
+      "onboarding_inputs": [
+        "Time of day",
+        "prompt style"
+      ],
+      "ai_builds": "30 or 90 days of prompts",
+      "tracks": [
+        "Entries"
+      ],
+      "default_visibility": "All P",
+      "tier": "Free"
+    },
+    {
+      "id": "read-24-books",
+      "area": "Learning and growth",
+      "name": "Read 24 books",
+      "onboarding_inputs": [
+        "Genres",
+        "reading time",
+        "current book"
+      ],
+      "ai_builds": "Monthly picks, pages per day",
+      "tracks": [
+        "Books",
+        "pages"
+      ],
+      "default_visibility": "Books Pub; pages Ci",
+      "tier": "Free"
+    },
+    {
+      "id": "learn-a-language",
+      "area": "Learning and growth",
+      "name": "Learn a language",
+      "onboarding_inputs": [
+        "Language",
+        "level now",
+        "minutes per day",
+        "trip date"
+      ],
+      "ai_builds": "Daily practice mix, speaking sessions",
+      "tracks": [
+        "Minutes",
+        "words learned"
+      ],
+      "default_visibility": "Minutes Ci",
+      "tier": "Premium"
+    },
+    {
+      "id": "daily-journal",
+      "area": "Learning and growth",
+      "name": "Daily journal",
+      "onboarding_inputs": [
+        "Time",
+        "style (prompts or free)"
+      ],
+      "ai_builds": "Prompts by week",
+      "tracks": [
+        "Entries"
+      ],
+      "default_visibility": "All P",
+      "tier": "Free"
+    },
+    {
+      "id": "screen-time-reset",
+      "area": "Learning and growth",
+      "name": "Screen-time reset",
+      "onboarding_inputs": [
+        "Daily hours now",
+        "target",
+        "apps that pull hardest"
+      ],
+      "ai_builds": "Step-down plan by week, swap activities",
+      "tracks": [
+        "Screen hours"
+      ],
+      "default_visibility": "Hours C",
+      "tier": "Premium"
+    },
+    {
+      "id": "declutter-the-house",
+      "area": "Home and life",
+      "name": "Declutter the house",
+      "onboarding_inputs": [
+        "Rooms",
+        "time per session",
+        "deadline"
+      ],
+      "ai_builds": "Room-by-room schedule, donate runs",
+      "tracks": [
+        "Rooms done",
+        "bags out"
+      ],
+      "default_visibility": "Rooms Ci",
+      "tier": "Free"
+    },
+    {
+      "id": "meal-prep-rhythm",
+      "area": "Home and life",
+      "name": "Meal prep rhythm",
+      "onboarding_inputs": [
+        "People fed",
+        "cooking nights",
+        "diet needs"
+      ],
+      "ai_builds": "Weekly menu, shopping list, prep day",
+      "tracks": [
+        "Meals cooked"
+      ],
+      "default_visibility": "All C",
+      "tier": "Free"
+    },
+    {
+      "id": "home-project",
+      "area": "Home and life",
+      "name": "Home project",
+      "onboarding_inputs": [
+        "Project",
+        "budget",
+        "deadline",
+        "helpers"
+      ],
+      "ai_builds": "Tasks in order, supply list, helper invites",
+      "tracks": [
+        "Tasks done",
+        "spent"
+      ],
+      "default_visibility": "Tasks Ci; spent P",
+      "tier": "Free"
+    },
+    {
+      "id": "holiday-plan",
+      "area": "Home and life",
+      "name": "Holiday plan",
+      "onboarding_inputs": [
+        "Events",
+        "gift list",
+        "budget"
+      ],
+      "ai_builds": "Week-by-week tasks to Dec 31",
+      "tracks": [
+        "Tasks done",
+        "spent"
+      ],
+      "default_visibility": "Tasks C; spent P",
+      "tier": "Premium"
+    },
+    {
+      "id": "charity-fundraiser",
+      "area": "Giving and community",
+      "name": "Charity fundraiser",
+      "onboarding_inputs": [
+        "Cause",
+        "target amount",
+        "event date"
+      ],
+      "ai_builds": "Ask schedule, update posts, thank-you list",
+      "tracks": [
+        "Raised",
+        "donors"
+      ],
+      "default_visibility": "Raised Pub",
+      "tier": "Free"
+    },
+    {
+      "id": "volunteer-hours",
+      "area": "Giving and community",
+      "name": "Volunteer hours",
+      "onboarding_inputs": [
+        "Where",
+        "hours target",
+        "months"
+      ],
+      "ai_builds": "Monthly schedule",
+      "tracks": [
+        "Hours"
+      ],
+      "default_visibility": "Hours Pub",
+      "tier": "Free"
+    },
+    {
+      "id": "club-challenge",
+      "area": "Giving and community",
+      "name": "Club challenge",
+      "onboarding_inputs": [
+        "Club",
+        "shared goal",
+        "dates",
+        "member layers"
+      ],
+      "ai_builds": "Shared plan plus each member's own targets",
+      "tracks": [
+        "Shared %",
+        "member layers"
+      ],
+      "default_visibility": "Shared Ci; layers per member",
+      "tier": "Creator"
+    },
+    {
+      "id": "small-group-study",
+      "area": "Giving and community",
+      "name": "Small group study",
+      "onboarding_inputs": [
+        "Group size",
+        "weeks",
+        "meeting day"
+      ],
+      "ai_builds": "Session plan, leader prompts, reminders",
+      "tracks": [
+        "Sessions held",
+        "attendance"
+      ],
+      "default_visibility": "All Ci",
+      "tier": "Creator"
+    },
+    {
+      "id": "mentor-someone",
+      "area": "Giving and community",
+      "name": "Mentor someone",
+      "onboarding_inputs": [
+        "Who",
+        "how often",
+        "focus"
+      ],
+      "ai_builds": "Session agendas, check-in rhythm",
+      "tracks": [
+        "Sessions"
+      ],
+      "default_visibility": "All C",
+      "tier": "Free"
+    },
+    {
+      "id": "neighborhood-project",
+      "area": "Giving and community",
+      "name": "Neighborhood project",
+      "onboarding_inputs": [
+        "Project",
+        "helpers",
+        "date"
+      ],
+      "ai_builds": "Task list, sign-up roles, reminders",
+      "tracks": [
+        "Tasks",
+        "helpers"
+      ],
+      "default_visibility": "All Pub",
+      "tier": "Free"
+    }
+  ]
+}

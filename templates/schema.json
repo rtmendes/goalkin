@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://goalkin.app/schemas/template.json",
+  "title": "GoalKin template",
+  "type": "object",
+  "required": ["id", "name", "area", "tier", "summary", "onboarding", "plan_blueprint", "tracked_fields", "guardrails"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "area": { "enum": ["Health", "Wealth", "Work and career", "Relationships", "Faith and spirit", "Learning and growth", "Home and life", "Giving and community"] },
+    "tier": { "enum": ["Free", "Premium", "Creator", "Custom"] },
+    "price": { "type": ["number", "null"], "minimum": 0 },
+    "summary": { "type": "string" },
+    "duration": { "type": "string" },
+    "onboarding": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "prompt", "type"],
+        "properties": {
+          "id": { "type": "string" },
+          "prompt": { "type": "string" },
+          "type": { "enum": ["text", "number", "slider", "choice", "multi_choice", "date", "calendar_slots"] },
+          "options": { "type": "array", "items": { "type": "string" } },
+          "min": { "type": "number" },
+          "max": { "type": "number" },
+          "reaction": { "type": "string" },
+          "optional": { "type": "boolean" }
+        }
+      }
+    },
+    "plan_blueprint": {
+      "type": "object",
+      "required": ["phases"],
+      "properties": {
+        "phases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "weeks"],
+            "properties": {
+              "name": { "type": "string" },
+              "weeks": { "type": "string" },
+              "benchmarks": { "type": "array", "items": { "type": "string" } },
+              "actions": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        },
+        "calendar": { "type": "string" }
+      }
+    },
+    "approach_variants": {
+      "type": "object",
+      "properties": {
+        "habit": { "type": "string" },
+        "willpower": { "type": "string" },
+        "time": { "type": "string" },
+        "reward": { "type": "string" },
+        "resource": { "type": "string" }
+      }
+    },
+    "tracked_fields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "kind", "default_visibility"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "kind": { "enum": ["number", "yes_no", "rating", "note", "money", "duration", "percent"] },
+          "unit": { "type": "string" },
+          "default_visibility": { "enum": ["private", "chosen", "circle", "public"] }
+        }
+      }
+    },
+    "guardrails": { "type": "array", "items": { "type": "string" } },
+    "restart_rules": { "type": "string" },
+    "addon_tracks": { "type": "array", "items": { "type": "string" } },
+    "creator": {
+      "type": "object",
+      "properties": { "id": { "type": "string" }, "revenue_share": { "type": "number" }, "license": { "type": "string" } }
+    },
+    "price_log": {
+      "type": "array",
+      "items": { "type": "object", "properties": { "from": {}, "to": {}, "basis": { "type": "string" }, "date": { "type": "string" } } }
+    }
+  }
+}
