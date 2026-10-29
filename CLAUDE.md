@@ -53,6 +53,6 @@ parallel one) can pick up cleanly. The last thing you write is the state, not a
 summary that only lives in this thread.
 
 **Credentials never block work here:** secrets load automatically from the vault
-on session start (see the Secrets section / `docs/INFISICAL_EVERGREEN.md`). Never
+on session start (see the Secrets section). Never
 stall a task waiting on a credential — if a needed secret name is missing, create
 it with `scripts/infisical-ensure-secret.mjs` and continue.
