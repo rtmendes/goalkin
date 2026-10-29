@@ -1,0 +1,137 @@
+{
+  "id": "deep-work-habit",
+  "name": "Deep work habit",
+  "area": "Work and career",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Build a deep work habit with focus blocks on your calendar and optional focus-room sessions with others.",
+  "duration": "6 weeks",
+  "onboarding": [
+    {
+      "id": "best_hours",
+      "prompt": "When are you sharpest?",
+      "type": "choice",
+      "options": [
+        "Early morning",
+        "Late morning",
+        "Afternoon",
+        "Evening"
+      ],
+      "reaction": "Great. Focus blocks go there."
+    },
+    {
+      "id": "distractions",
+      "prompt": "What pulls you off track most?",
+      "type": "multi_choice",
+      "options": [
+        "Phone",
+        "Email or chat",
+        "Meetings",
+        "People nearby",
+        "Noise"
+      ],
+      "reaction": "Thanks. We'll plan around those."
+    },
+    {
+      "id": "goal",
+      "prompt": "Focus hours per week to aim for?",
+      "type": "slider",
+      "min": 2,
+      "max": 20,
+      "reaction": "Solid target."
+    },
+    {
+      "id": "rooms",
+      "prompt": "Want to join focus rooms with others?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "Sometimes",
+        "No, solo"
+      ],
+      "reaction": "Noted. You can change this any time."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your focus blocks.",
+      "type": "calendar_slots",
+      "reaction": "Focus blocks placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Start small",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Half the weekly focus goal reached"
+        ],
+        "actions": [
+          "Two to three focus blocks a week",
+          "Distraction plan per block"
+        ]
+      },
+      {
+        "name": "Build",
+        "weeks": "3-4",
+        "benchmarks": [
+          "Three quarters of the goal reached"
+        ],
+        "actions": [
+          "Add blocks",
+          "Try a focus room"
+        ]
+      },
+      {
+        "name": "Hold",
+        "weeks": "5-6",
+        "benchmarks": [
+          "Weekly goal reached two weeks running"
+        ],
+        "actions": [
+          "Keep the rhythm",
+          "Review what helps most"
+        ]
+      }
+    ],
+    "calendar": "Focus blocks on the chosen slots in your best hours, optional focus-room invites, and a Friday review."
+  },
+  "approach_variants": {
+    "habit": "Same block at the same time daily; streak of blocks kept.",
+    "willpower": "Weekly focus-hours challenge.",
+    "time": "Every block is a calendar event with a stated task; weekly time review.",
+    "reward": "Owner-chosen reward each week the goal is reached.",
+    "resource": "First week sets up a quiet spot, headphones and app blockers."
+  },
+  "tracked_fields": [
+    {
+      "id": "hours",
+      "label": "Focus hours",
+      "kind": "duration",
+      "unit": "hours",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "rounds",
+      "label": "Focus rounds",
+      "kind": "number",
+      "unit": "rounds",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "This is personal growth, kept outside any employer's tools; nothing is shared with your workplace.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A missed block is not made up; the next one counts. A low week repeats the same target instead of raising it.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

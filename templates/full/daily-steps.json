@@ -1,0 +1,132 @@
+{
+  "id": "daily-steps",
+  "name": "Daily steps",
+  "area": "Health",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Raise your daily steps with a gentle weekly ramp and walk slots on your calendar.",
+  "duration": "8 weeks",
+  "onboarding": [
+    {
+      "id": "steps_now",
+      "prompt": "About how many steps a day do you average now?",
+      "type": "slider",
+      "min": 0,
+      "max": 15000,
+      "reaction": "That's your starting point, and it's a good one."
+    },
+    {
+      "id": "target",
+      "prompt": "What daily target would feel like a win?",
+      "type": "slider",
+      "min": 3000,
+      "max": 15000,
+      "reaction": "Love it. We'll ramp there week by week."
+    },
+    {
+      "id": "buddy",
+      "prompt": "Walk buddy?",
+      "type": "choice",
+      "options": [
+        "Solo",
+        "With a friend or partner",
+        "With the dog",
+        "Mix"
+      ],
+      "reaction": "Walks are better with company. Or a good podcast."
+    },
+    {
+      "id": "tracker",
+      "prompt": "How will you count steps?",
+      "type": "choice",
+      "options": [
+        "Phone",
+        "Watch or tracker",
+        "I'll estimate"
+      ],
+      "reaction": "Any of these works."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap times for short walks.",
+      "type": "calendar_slots",
+      "reaction": "Walk slots placed. Even 10 minutes counts."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Warm up",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Average steps up about 500 a day from baseline"
+        ],
+        "actions": [
+          "One planned 10-minute walk a day",
+          "Take-the-stairs and park-further swaps"
+        ]
+      },
+      {
+        "name": "Ramp",
+        "weeks": "3-6",
+        "benchmarks": [
+          "Average steps up about 500 to 1,000 a day each week until target"
+        ],
+        "actions": [
+          "Walks on chosen slots",
+          "One longer weekend walk"
+        ]
+      },
+      {
+        "name": "Hold",
+        "weeks": "7-8",
+        "benchmarks": [
+          "Target reached on 5 of 7 days"
+        ],
+        "actions": [
+          "Keep favourite walks",
+          "Set next target or hold"
+        ]
+      }
+    ],
+    "calendar": "Short walk slots on the chosen times each day, a longer weekend walk, and a weekly step target that ramps until the chosen goal."
+  },
+  "approach_variants": {
+    "habit": "Walks attached to daily cues (after lunch, after dinner); streak of days on target.",
+    "willpower": "Weekly step challenge and optional circle leaderboard for those who opt in.",
+    "time": "Walks are calendar blocks; weekly review of minutes walked.",
+    "reward": "Owner-chosen reward at each new weekly target.",
+    "resource": "Week one sorts comfortable shoes, a route list, rain options and a buddy."
+  },
+  "tracked_fields": [
+    {
+      "id": "steps",
+      "label": "Steps per day",
+      "kind": "number",
+      "unit": "steps",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "walks",
+      "label": "Planned walks done",
+      "kind": "number",
+      "unit": "walks",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "Talk to your doctor before starting. GoalKin offers education, not medical advice.",
+    "Increase gradually; if you feel pain or unusual breathlessness, stop and get checked.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A low day doesn't count against the week; the weekly average matters. A low week repeats the same target. After two weeks away, the target steps back to the last week you hit.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

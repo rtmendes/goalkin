@@ -1,0 +1,136 @@
+{
+  "id": "learn-a-skill-or-certification",
+  "name": "Learn a skill or certification",
+  "area": "Work and career",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Study for a skill, exam or demo with a schedule, practice tests and built-in review days.",
+  "duration": "4 to 16 weeks",
+  "onboarding": [
+    {
+      "id": "skill",
+      "prompt": "What are you learning or certifying in?",
+      "type": "text",
+      "reaction": "Great choice. Let's make a schedule."
+    },
+    {
+      "id": "date",
+      "prompt": "When is the exam or demo?",
+      "type": "date",
+      "reaction": "Date set. Review days fill in before it."
+    },
+    {
+      "id": "hours",
+      "prompt": "Hours of study per week?",
+      "type": "slider",
+      "min": 1,
+      "max": 20,
+      "reaction": "That's a solid rhythm."
+    },
+    {
+      "id": "materials",
+      "prompt": "Do you have study materials yet?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "Some",
+        "Not yet"
+      ],
+      "reaction": "We'll add a gather step if needed."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your study slots.",
+      "type": "calendar_slots",
+      "reaction": "Study blocks placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Map",
+        "weeks": "1",
+        "benchmarks": [
+          "Topic list and materials ready"
+        ],
+        "actions": [
+          "List exam topics or demo requirements",
+          "Baseline practice test"
+        ]
+      },
+      {
+        "name": "Study",
+        "weeks": "2-10",
+        "benchmarks": [
+          "Every topic covered once",
+          "Practice test every two weeks"
+        ],
+        "actions": [
+          "Study blocks by topic",
+          "Weekly review day"
+        ]
+      },
+      {
+        "name": "Review",
+        "weeks": "11-14",
+        "benchmarks": [
+          "Practice scores trending up",
+          "Weak topics revisited"
+        ],
+        "actions": [
+          "Full practice tests",
+          "Targeted review"
+        ]
+      },
+      {
+        "name": "Exam week",
+        "weeks": "15-16",
+        "benchmarks": [
+          "Exam or demo done"
+        ],
+        "actions": [
+          "Light review",
+          "Logistics checklist",
+          "Reflection"
+        ]
+      }
+    ],
+    "calendar": "Study blocks on the chosen slots, a weekly review day, practice tests every two weeks, and the exam date. Phases compress for shorter timelines."
+  },
+  "approach_variants": {
+    "habit": "Short daily study at the same time; streak of study days.",
+    "willpower": "Practice-score challenges and a countdown to exam day.",
+    "time": "Topic-by-topic calendar blocks; weekly hours review.",
+    "reward": "Owner-chosen reward at each practice-test milestone and after the exam.",
+    "resource": "First week gathers books, courses, practice tests and a study buddy."
+  },
+  "tracked_fields": [
+    {
+      "id": "hours",
+      "label": "Study hours",
+      "kind": "duration",
+      "unit": "hours",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "scores",
+      "label": "Practice scores",
+      "kind": "percent",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A missed study block moves to the next review day. After a missed week, the plan re-spreads remaining topics up to the exam date and flags if a later date would be more realistic.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

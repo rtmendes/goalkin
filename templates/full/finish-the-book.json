@@ -1,0 +1,130 @@
+{
+  "id": "finish-the-book",
+  "name": "Finish the book",
+  "area": "Work and career",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Finish your book draft with weekly word targets and a stop rule that keeps revision from stalling the draft.",
+  "duration": "Set by your deadline, often 12 to 26 weeks",
+  "onboarding": [
+    {
+      "id": "words",
+      "prompt": "Target word count for the draft?",
+      "type": "number",
+      "min": 1000,
+      "reaction": "That's a whole book. Let's slice it."
+    },
+    {
+      "id": "so_far",
+      "prompt": "Words written so far?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Every one counts.",
+      "optional": true
+    },
+    {
+      "id": "deadline",
+      "prompt": "When do you want the draft done?",
+      "type": "date",
+      "reaction": "Deadline set. Weekly targets come next."
+    },
+    {
+      "id": "days",
+      "prompt": "Which days will you write?",
+      "type": "multi_choice",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "reaction": "Writing days locked."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your writing slots on those days.",
+      "type": "calendar_slots",
+      "reaction": "Writing blocks placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Outline",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Chapter outline done"
+        ],
+        "actions": [
+          "Outline chapters",
+          "Set weekly word target"
+        ]
+      },
+      {
+        "name": "Draft",
+        "weeks": "3-22",
+        "benchmarks": [
+          "Weekly word target hit most weeks"
+        ],
+        "actions": [
+          "Writing sessions on chosen days",
+          "Revision stop rule: no rewriting earlier chapters until the draft is done; notes go in a fix-later list"
+        ]
+      },
+      {
+        "name": "Finish",
+        "weeks": "23-26",
+        "benchmarks": [
+          "Draft complete"
+        ],
+        "actions": [
+          "Final chapters",
+          "Celebrate",
+          "Plan revision"
+        ]
+      }
+    ],
+    "calendar": "Writing sessions on the chosen days and slots, a weekly word-count check, and the draft deadline."
+  },
+  "approach_variants": {
+    "habit": "Write at the same time each writing day; session streak.",
+    "willpower": "Weekly word sprints and a countdown to the draft deadline.",
+    "time": "Each session is a calendar block; weekly review of time written.",
+    "reward": "Owner-chosen reward at every 10,000 words.",
+    "resource": "First week sets up the writing space, tools and a reader or two."
+  },
+  "tracked_fields": [
+    {
+      "id": "words",
+      "label": "Words written",
+      "kind": "number",
+      "unit": "words",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "sessions",
+      "label": "Writing sessions",
+      "kind": "number",
+      "unit": "sessions",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed words roll gently across the next two weeks rather than piling onto one day. After a missed month, the plan offers a new deadline or a lower weekly target.",
+  "addon_tracks": [
+    "Suggested: Revision Roadmap Track"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

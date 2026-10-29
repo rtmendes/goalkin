@@ -1,0 +1,115 @@
+{
+  "id": "hard-conversation-prep",
+  "name": "Hard conversation prep",
+  "area": "Relationships",
+  "tier": "Premium",
+  "price": 9,
+  "summary": "Prepare for a hard conversation with prep steps, opening lines and a follow-up plan.",
+  "duration": "1 to 4 weeks",
+  "onboarding": [
+    {
+      "id": "who",
+      "prompt": "Who is the conversation with? (stays private)",
+      "type": "text",
+      "reaction": "Thanks for trusting the plan with this."
+    },
+    {
+      "id": "topic",
+      "prompt": "What's it about, in a sentence?",
+      "type": "text",
+      "reaction": "Clear is kind. You're already doing it."
+    },
+    {
+      "id": "deadline",
+      "prompt": "When do you want to have it by?",
+      "type": "date",
+      "reaction": "Date set. Prep fits before it."
+    },
+    {
+      "id": "hope",
+      "prompt": "What outcome would you hope for?",
+      "type": "text",
+      "reaction": "Good to know where you're headed.",
+      "optional": true
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap times for two short prep sessions.",
+      "type": "calendar_slots",
+      "reaction": "Prep sessions placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Prepare",
+        "weeks": "1",
+        "benchmarks": [
+          "Main point written in one sentence",
+          "Opening line drafted"
+        ],
+        "actions": [
+          "Write what happened and how it affected you",
+          "Write what you're asking for",
+          "Draft an opening line"
+        ]
+      },
+      {
+        "name": "Practice",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Practised out loud once"
+        ],
+        "actions": [
+          "Rehearse with a trusted friend or alone",
+          "Pick a calm time and place"
+        ]
+      },
+      {
+        "name": "Talk and follow up",
+        "weeks": "2-4",
+        "benchmarks": [
+          "Conversation held",
+          "Follow-up step done"
+        ],
+        "actions": [
+          "Have the conversation",
+          "Follow-up message or check-in",
+          "Reflection"
+        ]
+      }
+    ],
+    "calendar": "Two prep sessions, the conversation on a date you pick, and a follow-up reminder a few days later."
+  },
+  "approach_variants": {
+    "habit": "Short daily prep for a few days.",
+    "willpower": "Countdown to the conversation date.",
+    "time": "Prep and practice blocks on the calendar.",
+    "reward": "Owner-chosen treat after the conversation, however it goes.",
+    "resource": "Gather notes, examples and a support person first."
+  },
+  "tracked_fields": [
+    {
+      "id": "steps",
+      "label": "Prep steps done",
+      "kind": "number",
+      "unit": "steps",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "GoalKin offers prompts and planning, not counselling or therapy. If things feel stuck or painful, a licensed counsellor can help.",
+    "If you ever feel unsafe with someone, put your safety first and contact local emergency services or a support line.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "If the date passes, the plan asks whether to reschedule, write it down instead, or let it go for now. Prep work is kept.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 9,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

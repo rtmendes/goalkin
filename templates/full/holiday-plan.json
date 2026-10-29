@@ -1,0 +1,137 @@
+{
+  "id": "holiday-plan",
+  "name": "Holiday plan",
+  "area": "Home and life",
+  "tier": "Premium",
+  "price": 19,
+  "summary": "Get through the holiday season with week-by-week tasks for events, gifts and budget through December 31.",
+  "duration": "From now to December 31",
+  "onboarding": [
+    {
+      "id": "events",
+      "prompt": "Which events are you planning for?",
+      "type": "multi_choice",
+      "options": [
+        "Thanksgiving",
+        "Hanukkah",
+        "Christmas",
+        "Kwanzaa",
+        "New Year's Eve",
+        "Work or church party",
+        "Travel"
+      ],
+      "reaction": "Festive. Each gets its tasks."
+    },
+    {
+      "id": "gifts",
+      "prompt": "Who's on the gift list?",
+      "type": "text",
+      "reaction": "List started.",
+      "optional": true
+    },
+    {
+      "id": "budget",
+      "prompt": "Total holiday budget?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Kept private."
+    },
+    {
+      "id": "hosting",
+      "prompt": "Are you hosting anything?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "No"
+      ],
+      "reaction": "We'll add hosting tasks."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap weekly holiday-planning slots.",
+      "type": "calendar_slots",
+      "reaction": "Placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Plan",
+        "weeks": "1",
+        "benchmarks": [
+          "Event and gift lists done",
+          "Budget split"
+        ],
+        "actions": [
+          "List events and gifts",
+          "Split budget by category"
+        ]
+      },
+      {
+        "name": "Shop and prep",
+        "weeks": "2-5",
+        "benchmarks": [
+          "Gifts bought",
+          "Hosting prep done"
+        ],
+        "actions": [
+          "Weekly shopping tasks",
+          "Ship-by dates"
+        ]
+      },
+      {
+        "name": "Celebrate",
+        "weeks": "6-8",
+        "benchmarks": [
+          "Events done"
+        ],
+        "actions": [
+          "Last-minute checklist",
+          "Rest day",
+          "Thank-you notes"
+        ]
+      }
+    ],
+    "calendar": "Weekly planning slots, shipping deadlines, event dates, and a rest day after the big ones, ending December 31. Weeks are counted back from December 31."
+  },
+  "approach_variants": {
+    "habit": "One small holiday task a day, stacked on morning coffee; streak of task days.",
+    "willpower": "Challenge: all gifts bought by a date you pick, with a countdown.",
+    "time": "Every task and shipping deadline is a calendar block; weekly time review.",
+    "reward": "Owner-chosen treat when gifts are done and a rest day after the big event.",
+    "resource": "First week gathers addresses, wrapping supplies, recipes and the budget split."
+  },
+  "tracked_fields": [
+    {
+      "id": "tasks",
+      "label": "Tasks done",
+      "kind": "number",
+      "unit": "tasks",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "spent",
+      "label": "Spent",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Budget figures stay private by default.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "Missed tasks roll forward; tasks with deadlines (shipping, bookings) move to the top.",
+  "addon_tracks": [
+    "Suggested: Finish the Year Reset Track"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 19,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

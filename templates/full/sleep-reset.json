@@ -1,0 +1,133 @@
+{
+  "id": "sleep-reset",
+  "name": "Sleep reset",
+  "area": "Health",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Reset your sleep schedule with a wind-down routine, light and caffeine cutoffs and a 14-night ramp to a steady bedtime.",
+  "duration": "14 nights plus 2 weeks to hold it",
+  "onboarding": [
+    {
+      "id": "bedtime_now",
+      "prompt": "What time do you usually get to sleep now?",
+      "type": "text",
+      "reaction": "Thanks for being honest. We'll move it in small steps."
+    },
+    {
+      "id": "wake_time",
+      "prompt": "What time do you need to wake up?",
+      "type": "text",
+      "reaction": "Great. That anchors the whole plan."
+    },
+    {
+      "id": "screens",
+      "prompt": "Screens in bed?",
+      "type": "choice",
+      "options": [
+        "Most nights",
+        "Sometimes",
+        "Rarely"
+      ],
+      "reaction": "No judgement. We'll build a swap that feels good."
+    },
+    {
+      "id": "caffeine",
+      "prompt": "When's your last coffee, tea or energy drink usually?",
+      "type": "choice",
+      "options": [
+        "Morning only",
+        "Early afternoon",
+        "Late afternoon or evening",
+        "I don't have caffeine"
+      ],
+      "reaction": "Noted. We'll suggest a gentle cutoff."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap the evening slot for your wind-down reminder.",
+      "type": "calendar_slots",
+      "reaction": "Wind-down reminder set. Your future self says thanks."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Ramp",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Bedtime moves about 15 minutes earlier every few nights toward target",
+          "Wind-down routine done 10 of 14 nights"
+        ],
+        "actions": [
+          "Nightly wind-down reminder",
+          "Caffeine cutoff time",
+          "Morning light within an hour of waking",
+          "Screens out of bed swap"
+        ]
+      },
+      {
+        "name": "Hold",
+        "weeks": "3-4",
+        "benchmarks": [
+          "Same wake time at least 5 days a week",
+          "Average rested score up from week 1"
+        ],
+        "actions": [
+          "Keep wind-down and cutoffs",
+          "Weekend wake time within an hour of weekdays",
+          "Two-week reflection"
+        ]
+      }
+    ],
+    "calendar": "A nightly wind-down reminder at the chosen slot, a caffeine cutoff reminder, and a fixed wake-time alarm note. Bedtime targets step earlier over the 14-night ramp."
+  },
+  "approach_variants": {
+    "habit": "Wind-down stacked on an existing evening habit (brushing teeth); streak of on-time nights.",
+    "willpower": "14-night challenge with a nightly countdown.",
+    "time": "Exact calendar blocks for wind-down, lights out and wake; weekly review of sleep window.",
+    "reward": "Owner-chosen reward after night 7 and night 14.",
+    "resource": "First nights set up a phone charging spot outside the bedroom, an alarm clock and a dark, cool room."
+  },
+  "tracked_fields": [
+    {
+      "id": "bedtime",
+      "label": "Bedtime",
+      "kind": "note",
+      "unit": "time of day",
+      "default_visibility": "private"
+    },
+    {
+      "id": "wake_time",
+      "label": "Wake time",
+      "kind": "note",
+      "unit": "time of day",
+      "default_visibility": "private"
+    },
+    {
+      "id": "rested",
+      "label": "How rested",
+      "kind": "rating",
+      "unit": "1 to 5",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Talk to your doctor before starting. GoalKin offers education, not medical advice.",
+    "Loud snoring, gasping at night, or ongoing trouble sleeping are worth raising with your doctor.",
+    "Don't drive or operate machinery when very sleepy.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A late night doesn't reset the ramp; the next night uses the same target. Three late nights in a row pause the ramp for a few days at the current bedtime before stepping earlier again.",
+  "addon_tracks": [
+    "Suggested: Evening Wind-Down Audio Track"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

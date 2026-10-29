@@ -1,0 +1,130 @@
+{
+  "id": "prayer-rhythm",
+  "name": "Prayer rhythm",
+  "area": "Faith and spirit",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Build a daily prayer rhythm with prompts, a weekly theme and a log for answered prayers.",
+  "duration": "8 weeks, then ongoing",
+  "onboarding": [
+    {
+      "id": "times",
+      "prompt": "When would you like to pray?",
+      "type": "multi_choice",
+      "options": [
+        "Morning",
+        "Midday",
+        "Evening",
+        "Bedtime"
+      ],
+      "reaction": "Beautiful. Prompts land at those times."
+    },
+    {
+      "id": "topics",
+      "prompt": "What's on your prayer list?",
+      "type": "multi_choice",
+      "options": [
+        "Family",
+        "Friends",
+        "Health",
+        "Work",
+        "Church",
+        "Community",
+        "The world"
+      ],
+      "reaction": "Those shape the weekly themes."
+    },
+    {
+      "id": "family",
+      "prompt": "Praying with family?",
+      "type": "choice",
+      "options": [
+        "Alone",
+        "With my spouse",
+        "With my kids",
+        "With the whole family"
+      ],
+      "reaction": "We'll add family prompts if so."
+    },
+    {
+      "id": "length",
+      "prompt": "Minutes per prayer time?",
+      "type": "slider",
+      "min": 2,
+      "max": 30,
+      "reaction": "Any length counts."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your prayer times.",
+      "type": "calendar_slots",
+      "reaction": "Prompts placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Begin",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Pray on 10 of 14 days"
+        ],
+        "actions": [
+          "Daily prompt",
+          "Start a private prayer list"
+        ]
+      },
+      {
+        "name": "Weekly themes",
+        "weeks": "3-8",
+        "benchmarks": [
+          "Pray most days",
+          "Answered-prayer log started"
+        ],
+        "actions": [
+          "Weekly theme from your topics",
+          "Sunday look-back"
+        ]
+      }
+    ],
+    "calendar": "A daily prompt at each chosen time and a Sunday look-back reminder."
+  },
+  "approach_variants": {
+    "habit": "Prayer stacked on an existing moment (first coffee); streak of days.",
+    "willpower": "40-day prayer challenge option.",
+    "time": "Prayer time as a fixed calendar block.",
+    "reward": "Answered-prayer log reviewed at each month's end.",
+    "resource": "First week sets up a journal, a quiet spot and a prayer partner."
+  },
+  "tracked_fields": [
+    {
+      "id": "days_prayed",
+      "label": "Days prayed",
+      "kind": "number",
+      "unit": "days",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "list",
+      "label": "Prayer list",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Prayer requests about other people stay private unless you choose to share them.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed day is just the next day; no broken streak shown. After a quiet week, the plan restarts with a short welcome-back prompt.",
+  "addon_tracks": [
+    "Suggested: Faith Promises Scripture Response Guide"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

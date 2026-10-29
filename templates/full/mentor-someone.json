@@ -1,0 +1,124 @@
+{
+  "id": "mentor-someone",
+  "name": "Mentor someone",
+  "area": "Giving and community",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Mentor someone with session agendas and a regular check-in rhythm.",
+  "duration": "12 weeks, renewable",
+  "onboarding": [
+    {
+      "id": "who",
+      "prompt": "Who are you mentoring?",
+      "type": "text",
+      "reaction": "Lucky them."
+    },
+    {
+      "id": "often",
+      "prompt": "How often?",
+      "type": "choice",
+      "options": [
+        "Weekly",
+        "Every two weeks",
+        "Monthly"
+      ],
+      "reaction": "Rhythm set."
+    },
+    {
+      "id": "focus",
+      "prompt": "Focus area?",
+      "type": "text",
+      "reaction": "Agendas will fit."
+    },
+    {
+      "id": "format",
+      "prompt": "Format?",
+      "type": "choice",
+      "options": [
+        "In person",
+        "Call",
+        "Video"
+      ],
+      "reaction": "Noted."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap session slots.",
+      "type": "calendar_slots",
+      "reaction": "Placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Start",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Goals agreed"
+        ],
+        "actions": [
+          "First session agenda"
+        ]
+      },
+      {
+        "name": "Rhythm",
+        "weeks": "3-11",
+        "benchmarks": [
+          "Sessions held on schedule"
+        ],
+        "actions": [
+          "Agenda per session",
+          "Between-session check-in"
+        ]
+      },
+      {
+        "name": "Review",
+        "weeks": "12",
+        "benchmarks": [
+          "Progress reviewed"
+        ],
+        "actions": [
+          "Next 12 weeks"
+        ]
+      }
+    ],
+    "calendar": "Sessions on the chosen slots with an agenda attached and a short check-in reminder between sessions."
+  },
+  "approach_variants": {
+    "habit": "Same slot every time, with a two-minute prep before each session.",
+    "willpower": "A stretch goal for the mentee each session and a 12-week finish line.",
+    "time": "Sessions and prep are calendar blocks with the agenda attached.",
+    "reward": "Celebrate each milestone the mentee reaches together.",
+    "resource": "First week gathers reading, tools or contacts the mentee will need."
+  },
+  "tracked_fields": [
+    {
+      "id": "sessions",
+      "label": "Sessions held",
+      "kind": "number",
+      "unit": "sessions",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "notes",
+      "label": "Session notes",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Notes about the person you mentor stay private.",
+    "Mentoring is guidance between people; it is not counselling or professional advice.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed session is rescheduled within the week if possible.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

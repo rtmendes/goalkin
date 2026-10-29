@@ -1,0 +1,142 @@
+{
+  "id": "learn-a-language",
+  "name": "Learn a language",
+  "area": "Learning and growth",
+  "tier": "Premium",
+  "price": 24,
+  "summary": "Learn a language with a daily practice mix and regular speaking sessions, paced to your level and any trip date.",
+  "duration": "12 to 26 weeks",
+  "onboarding": [
+    {
+      "id": "language",
+      "prompt": "Which language?",
+      "type": "text",
+      "reaction": "Great pick."
+    },
+    {
+      "id": "level",
+      "prompt": "Your level now?",
+      "type": "choice",
+      "options": [
+        "Brand new",
+        "A few words",
+        "Can chat a little",
+        "Conversational"
+      ],
+      "reaction": "We'll start there."
+    },
+    {
+      "id": "minutes",
+      "prompt": "Minutes a day?",
+      "type": "slider",
+      "min": 5,
+      "max": 60,
+      "reaction": "Short daily practice beats long weekly cramming."
+    },
+    {
+      "id": "trip",
+      "prompt": "Trip or deadline coming?",
+      "type": "date",
+      "reaction": "Noted. Travel phrases come first.",
+      "optional": true
+    },
+    {
+      "id": "speaking",
+      "prompt": "Who can you speak with?",
+      "type": "choice",
+      "options": [
+        "A friend or family member",
+        "A tutor",
+        "A language exchange",
+        "No one yet"
+      ],
+      "reaction": "We'll plan sessions with them."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your practice slot and a weekly speaking slot.",
+      "type": "calendar_slots",
+      "reaction": "Practice placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Basics",
+        "weeks": "1-4",
+        "benchmarks": [
+          "Core phrases learned",
+          "First speaking session"
+        ],
+        "actions": [
+          "Daily mix: words, listening, speaking aloud",
+          "Weekly speaking session"
+        ]
+      },
+      {
+        "name": "Build",
+        "weeks": "5-12",
+        "benchmarks": [
+          "Short conversations",
+          "Words learned growing"
+        ],
+        "actions": [
+          "Daily practice",
+          "Weekly speaking session"
+        ]
+      },
+      {
+        "name": "Use it",
+        "weeks": "13-26",
+        "benchmarks": [
+          "Trip-ready or level goal reached"
+        ],
+        "actions": [
+          "Daily practice",
+          "Speaking twice a week",
+          "Real-world practice"
+        ]
+      }
+    ],
+    "calendar": "A daily practice block and a weekly speaking session; travel phrases are moved up if a trip date is set."
+  },
+  "approach_variants": {
+    "habit": "Practice stacked on a daily routine (commute, lunch); streak of practice days.",
+    "willpower": "Monthly speaking challenge and a countdown to the trip or deadline.",
+    "time": "Daily practice and weekly speaking sessions as calendar blocks; weekly minutes review.",
+    "reward": "Owner-chosen reward at each level milestone.",
+    "resource": "First week gathers an app, a tutor or exchange partner, and a notebook."
+  },
+  "tracked_fields": [
+    {
+      "id": "minutes",
+      "label": "Minutes practised",
+      "kind": "duration",
+      "unit": "minutes",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "words",
+      "label": "Words learned",
+      "kind": "number",
+      "unit": "words",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A missed day is skipped. After a missed week, the plan starts with a review day before adding new material.",
+  "addon_tracks": [
+    "Suggested: Travel Phrases Pack"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 24,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

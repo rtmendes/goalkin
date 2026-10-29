@@ -1,0 +1,107 @@
+{
+  "id": "volunteer-hours",
+  "name": "Volunteer hours",
+  "area": "Giving and community",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Reach a volunteer hours target with a monthly schedule at the places you choose.",
+  "duration": "Set by your months",
+  "onboarding": [
+    {
+      "id": "where",
+      "prompt": "Where will you volunteer?",
+      "type": "text",
+      "reaction": "Wonderful."
+    },
+    {
+      "id": "hours",
+      "prompt": "Hours target?",
+      "type": "number",
+      "min": 1,
+      "reaction": "Great."
+    },
+    {
+      "id": "months",
+      "prompt": "Over how many months?",
+      "type": "slider",
+      "min": 1,
+      "max": 12,
+      "reaction": "Monthly targets coming."
+    },
+    {
+      "id": "with",
+      "prompt": "Volunteering with anyone?",
+      "type": "choice",
+      "options": [
+        "Solo",
+        "Family",
+        "Friends",
+        "A group"
+      ],
+      "reaction": "Noted."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your volunteer slots.",
+      "type": "calendar_slots",
+      "reaction": "Placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Sign up",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Shifts booked"
+        ],
+        "actions": [
+          "Contact the organisation",
+          "Complete any training or checks"
+        ]
+      },
+      {
+        "name": "Serve",
+        "weeks": "3-48",
+        "benchmarks": [
+          "Monthly hours target met"
+        ],
+        "actions": [
+          "Shifts",
+          "Monthly reflection"
+        ]
+      }
+    ],
+    "calendar": "Volunteer shifts on the chosen slots and a monthly hours check. Phase length follows the months you chose."
+  },
+  "approach_variants": {
+    "habit": "Same shift on the same day each week; streak of weeks served.",
+    "willpower": "Monthly hours challenge and a countdown to the hours target.",
+    "time": "Shifts and travel time are calendar blocks; monthly hours review.",
+    "reward": "Reflection and an owner-chosen treat at each quarter of the target.",
+    "resource": "First weeks handle sign-up, training, background checks and transport."
+  },
+  "tracked_fields": [
+    {
+      "id": "hours",
+      "label": "Volunteer hours",
+      "kind": "duration",
+      "unit": "hours",
+      "default_visibility": "public"
+    }
+  ],
+  "guardrails": [
+    "Follow the organisation's safety rules and training.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed hours spread across the remaining months.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "id": "first-5k-10k",
+  "name": "First 5K / 10K",
+  "area": "Health",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Build up to a 5K or 10K with a week-by-week walk-run or run plan, rest days and an easy race week.",
+  "duration": "8 to 12 weeks",
+  "onboarding": [
+    {
+      "id": "race",
+      "prompt": "Got a race on the calendar?",
+      "type": "choice",
+      "options": [
+        "Yes, I have a race date",
+        "No race yet, just the distance"
+      ],
+      "reaction": "Either way works. A date just gives the plan a finish line."
+    },
+    {
+      "id": "race_date",
+      "prompt": "When is the race (or the day you want to run it)?",
+      "type": "date",
+      "reaction": "Marked. We'll count back from there.",
+      "optional": true
+    },
+    {
+      "id": "distance",
+      "prompt": "Which distance?",
+      "type": "choice",
+      "options": [
+        "5K",
+        "10K"
+      ],
+      "reaction": "Nice. We'll size the weeks to match."
+    },
+    {
+      "id": "runs_now",
+      "prompt": "How many times a week do you run or walk-run now?",
+      "type": "slider",
+      "min": 0,
+      "max": 6,
+      "reaction": "Zero is a perfectly good starting line."
+    },
+    {
+      "id": "longest",
+      "prompt": "Longest run or walk in the last month, in minutes?",
+      "type": "number",
+      "min": 0,
+      "max": 180,
+      "reaction": "Good to know. Week one starts a notch below that."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap the days and times you're free to run.",
+      "type": "calendar_slots",
+      "reaction": "Locked in. Runs land there, with rest days in between."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Easy start",
+        "weeks": "1-3",
+        "benchmarks": [
+          "Three sessions a week for three weeks"
+        ],
+        "actions": [
+          "Walk-run intervals sized from your longest recent run",
+          "One rest day between runs",
+          "Five-minute warm-up walk every session"
+        ]
+      },
+      {
+        "name": "Build",
+        "weeks": "4-8",
+        "benchmarks": [
+          "Run or walk-run 20 to 30 minutes without stopping",
+          "Longest run grows by no more than about 10% a week"
+        ],
+        "actions": [
+          "Three runs a week: easy, steady, longer",
+          "One optional cross-training day"
+        ]
+      },
+      {
+        "name": "Race ready",
+        "weeks": "9-12",
+        "benchmarks": [
+          "One longer run near race distance",
+          "Race week stays light"
+        ],
+        "actions": [
+          "Race-week taper: shorter, easy runs",
+          "Race day or personal time trial",
+          "Post-race reflection"
+        ]
+      }
+    ],
+    "calendar": "Three runs a week on the chosen slots, rest days left open, a longer run on the weekend slot, and a lighter race week ending in race day. 5K plans run about 8 weeks; 10K plans about 12."
+  },
+  "approach_variants": {
+    "habit": "Runs attached to an existing routine (after school drop-off, before dinner); streak of weeks with three runs.",
+    "willpower": "Weekly countdown to race day and a stretch target for the longest run, still inside safe weekly increases.",
+    "time": "Every run is a fixed calendar block with warm-up and cool-down time built in; Sunday time review.",
+    "reward": "Owner-picked rewards at week 4, week 8 and race day (new socks, a race photo print).",
+    "resource": "Week one covers shoes, a safe route, a running app or watch if wanted, and a buddy or group."
+  },
+  "tracked_fields": [
+    {
+      "id": "runs_done",
+      "label": "Runs done",
+      "kind": "number",
+      "unit": "runs",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "distance",
+      "label": "Distance",
+      "kind": "number",
+      "unit": "km or miles",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "longest_run",
+      "label": "Longest run",
+      "kind": "number",
+      "unit": "km or miles",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "pace",
+      "label": "Pace",
+      "kind": "note",
+      "unit": "min per km or mile",
+      "default_visibility": "private"
+    },
+    {
+      "id": "how_felt",
+      "label": "How it felt",
+      "kind": "rating",
+      "unit": "1 to 5",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Talk to your doctor before starting. GoalKin offers education, not medical advice.",
+    "Stop and rest if you feel pain, dizziness or chest discomfort, and get checked before running again.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "One missed run is skipped, not doubled up. Missing a full week repeats the last completed week. Missing two or more weeks offers a re-plan that steps back one phase and moves the race-day target if needed.",
+  "addon_tracks": [
+    "Suggested: Beginner Runner Mobility Track",
+    "Suggested: Race Day Mindset Guide"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

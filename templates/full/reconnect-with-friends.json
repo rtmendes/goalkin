@@ -1,0 +1,119 @@
+{
+  "id": "reconnect-with-friends",
+  "name": "Reconnect with friends",
+  "area": "Relationships",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Stay in touch with friends through a simple rotation so no one goes 30 days without hearing from you.",
+  "duration": "12 weeks, then ongoing",
+  "onboarding": [
+    {
+      "id": "names",
+      "prompt": "Who do you want to reconnect with? (optional, stays private)",
+      "type": "text",
+      "reaction": "Lovely list.",
+      "optional": true
+    },
+    {
+      "id": "how_many",
+      "prompt": "How many people in the rotation?",
+      "type": "number",
+      "min": 1,
+      "max": 40,
+      "reaction": "Good number."
+    },
+    {
+      "id": "often",
+      "prompt": "How often do you want to reach out?",
+      "type": "choice",
+      "options": [
+        "A few times a week",
+        "Weekly",
+        "Every two weeks"
+      ],
+      "reaction": "We'll space it so it feels natural."
+    },
+    {
+      "id": "way",
+      "prompt": "Preferred ways to connect?",
+      "type": "multi_choice",
+      "options": [
+        "Call",
+        "Text or voice note",
+        "Coffee",
+        "Walk",
+        "Video call"
+      ],
+      "reaction": "Mix it up."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap times for quick reach-outs.",
+      "type": "calendar_slots",
+      "reaction": "Reach-out slots set."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "First round",
+        "weeks": "1-4",
+        "benchmarks": [
+          "Everyone on the list contacted once"
+        ],
+        "actions": [
+          "One reach-out per slot",
+          "Message ideas for each person"
+        ]
+      },
+      {
+        "name": "Rotation",
+        "weeks": "5-12",
+        "benchmarks": [
+          "No one goes 30 days without contact"
+        ],
+        "actions": [
+          "Rotation continues",
+          "One in-person meet-up a month"
+        ]
+      }
+    ],
+    "calendar": "Reach-out reminders at the chosen times naming the next person in the rotation, plus a monthly meet-up suggestion."
+  },
+  "approach_variants": {
+    "habit": "Reach out during an existing routine (commute, lunch); streak of weeks.",
+    "willpower": "Challenge: reconnect with everyone on the list in 30 days.",
+    "time": "Each reach-out is a short calendar block.",
+    "reward": "Owner-chosen treat after each full rotation.",
+    "resource": "First week gathers contact details and message starters."
+  },
+  "tracked_fields": [
+    {
+      "id": "contacts",
+      "label": "Contacts made",
+      "kind": "number",
+      "unit": "contacts",
+      "default_visibility": "private"
+    },
+    {
+      "id": "names",
+      "label": "People in the rotation",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Names and notes about friends stay private to you.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed reach-outs move the person to the top of the next slot. After a quiet month, the plan restarts the first round with a short catch-up message template.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

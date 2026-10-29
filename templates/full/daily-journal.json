@@ -1,0 +1,106 @@
+{
+  "id": "daily-journal",
+  "name": "Daily journal",
+  "area": "Learning and growth",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Keep a daily journal with prompts by week or free writing, at the time you choose.",
+  "duration": "8 weeks, then ongoing",
+  "onboarding": [
+    {
+      "id": "time",
+      "prompt": "When will you journal?",
+      "type": "choice",
+      "options": [
+        "Morning",
+        "Lunch",
+        "Evening",
+        "Bedtime"
+      ],
+      "reaction": "Got it."
+    },
+    {
+      "id": "style",
+      "prompt": "Prompts or free writing?",
+      "type": "choice",
+      "options": [
+        "Prompts",
+        "Free writing",
+        "Mix"
+      ],
+      "reaction": "Good choice."
+    },
+    {
+      "id": "minutes",
+      "prompt": "Minutes per entry?",
+      "type": "slider",
+      "min": 3,
+      "max": 30,
+      "reaction": "Even five minutes counts."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your journaling time.",
+      "type": "calendar_slots",
+      "reaction": "Reminder set."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Start",
+        "weeks": "1-2",
+        "benchmarks": [
+          "10 of 14 days"
+        ],
+        "actions": [
+          "Daily reminder",
+          "Weekly prompt theme"
+        ]
+      },
+      {
+        "name": "Habit",
+        "weeks": "3-8",
+        "benchmarks": [
+          "Entries most days"
+        ],
+        "actions": [
+          "Weekly theme",
+          "Monthly look-back"
+        ]
+      }
+    ],
+    "calendar": "A daily reminder at the chosen time and a monthly look-back."
+  },
+  "approach_variants": {
+    "habit": "Journal right after an existing habit (morning coffee, brushing teeth); streak of entries.",
+    "willpower": "Challenge: 30 days in a row with a countdown.",
+    "time": "A fixed daily calendar block; weekly review of time spent.",
+    "reward": "Owner-chosen treat after each month of entries.",
+    "resource": "First day sets up a notebook or note app and a quiet spot."
+  },
+  "tracked_fields": [
+    {
+      "id": "entries",
+      "label": "Entries",
+      "kind": "number",
+      "unit": "entries",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Entries are private by default.",
+    "Journaling prompts are for reflection, not therapy. If you're struggling, reach out to a professional or a support line.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed days aren't counted against you; the next prompt continues where you left off.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "id": "read-24-books",
+  "name": "Read 24 books",
+  "area": "Learning and growth",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Read 24 books in a year with monthly picks and a daily page target.",
+  "duration": "52 weeks",
+  "onboarding": [
+    {
+      "id": "genres",
+      "prompt": "Favourite genres?",
+      "type": "multi_choice",
+      "options": [
+        "Fiction",
+        "Biography",
+        "Business",
+        "Faith",
+        "History",
+        "Science",
+        "Self-growth"
+      ],
+      "reaction": "Good mix. Monthly picks will rotate."
+    },
+    {
+      "id": "time",
+      "prompt": "Minutes a day for reading?",
+      "type": "slider",
+      "min": 10,
+      "max": 90,
+      "reaction": "A steady daily habit adds up fast."
+    },
+    {
+      "id": "current",
+      "prompt": "Reading anything now?",
+      "type": "text",
+      "reaction": "Book one counts.",
+      "optional": true
+    },
+    {
+      "id": "format",
+      "prompt": "Formats you'll use?",
+      "type": "multi_choice",
+      "options": [
+        "Print",
+        "E-book",
+        "Audiobook"
+      ],
+      "reaction": "All count."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your reading time.",
+      "type": "calendar_slots",
+      "reaction": "Reading time placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "First quarter",
+        "weeks": "1-13",
+        "benchmarks": [
+          "6 books read"
+        ],
+        "actions": [
+          "Daily pages target",
+          "Monthly picks"
+        ]
+      },
+      {
+        "name": "Second quarter",
+        "weeks": "14-26",
+        "benchmarks": [
+          "12 books read"
+        ],
+        "actions": [
+          "Pages target",
+          "Mid-year list review"
+        ]
+      },
+      {
+        "name": "Third quarter",
+        "weeks": "27-39",
+        "benchmarks": [
+          "18 books read"
+        ],
+        "actions": [
+          "Pages target"
+        ]
+      },
+      {
+        "name": "Finish",
+        "weeks": "40-52",
+        "benchmarks": [
+          "24 books read"
+        ],
+        "actions": [
+          "Pages target",
+          "Year-end list"
+        ]
+      }
+    ],
+    "calendar": "A daily reading block and a monthly pick reminder."
+  },
+  "approach_variants": {
+    "habit": "Read at the same time daily (bedtime, commute); streak of reading days.",
+    "willpower": "A monthly challenge book outside your usual genres and a countdown to book 24.",
+    "time": "Daily reading blocks on the calendar; weekly pages review.",
+    "reward": "Owner-chosen reward every 6 books.",
+    "resource": "First week gets a library card, an e-reader or audiobook app, and a to-read list."
+  },
+  "tracked_fields": [
+    {
+      "id": "books",
+      "label": "Books finished",
+      "kind": "number",
+      "unit": "books",
+      "default_visibility": "public"
+    },
+    {
+      "id": "pages",
+      "label": "Pages read",
+      "kind": "number",
+      "unit": "pages",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "Missed pages spread over the next week. A slow month adjusts the target pace; the plan never asks you to read more than double your usual daily pages.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

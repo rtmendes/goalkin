@@ -1,0 +1,105 @@
+{
+  "id": "sabbath-and-rest",
+  "name": "Sabbath and rest",
+  "area": "Faith and spirit",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Keep a weekly day of rest with a prep checklist the day before and a rest-day plan that fits you.",
+  "duration": "8 weeks, then ongoing",
+  "onboarding": [
+    {
+      "id": "day",
+      "prompt": "Which day will you rest?",
+      "type": "choice",
+      "options": [
+        "Saturday",
+        "Sunday",
+        "Another day",
+        "It varies"
+      ],
+      "reaction": "Rest day set."
+    },
+    {
+      "id": "meaning",
+      "prompt": "What does rest mean to you?",
+      "type": "multi_choice",
+      "options": [
+        "Worship",
+        "Time outside",
+        "Family time",
+        "No work email",
+        "Naps and quiet",
+        "Hobbies"
+      ],
+      "reaction": "Lovely. The rest-day plan will fit that."
+    },
+    {
+      "id": "hard",
+      "prompt": "What usually gets in the way?",
+      "type": "text",
+      "reaction": "Thanks. We'll prep around it.",
+      "optional": true
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap a prep time the day before.",
+      "type": "calendar_slots",
+      "reaction": "Prep reminder placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Try it",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Two rest days kept"
+        ],
+        "actions": [
+          "Prep checklist the day before",
+          "Simple rest-day plan"
+        ]
+      },
+      {
+        "name": "Settle in",
+        "weeks": "3-8",
+        "benchmarks": [
+          "Rest day kept most weeks"
+        ],
+        "actions": [
+          "Refine checklist",
+          "Monthly reflection"
+        ]
+      }
+    ],
+    "calendar": "A prep reminder the day before and the rest day blocked on your calendar."
+  },
+  "approach_variants": {
+    "habit": "Same prep routine every week; streak.",
+    "willpower": "Challenge: a fully screen-free rest day once a month.",
+    "time": "Rest day blocked out; work kept off the calendar.",
+    "reward": "Owner-chosen treat for the rest day itself.",
+    "resource": "Prep week gathers meals, errands and supplies ahead."
+  },
+  "tracked_fields": [
+    {
+      "id": "rest_days",
+      "label": "Rest days kept",
+      "kind": "yes_no",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed rest day isn't made up; next week's prep reminder comes a little earlier.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "co-parenting-rhythm",
+  "name": "Co-parenting rhythm",
+  "area": "Relationships",
+  "tier": "Creator",
+  "price": 19,
+  "summary": "Keep co-parenting steady with a handoff checklist, a shared decisions list and a monthly check-in agenda.",
+  "duration": "12 weeks, then ongoing",
+  "onboarding": [
+    {
+      "id": "pattern",
+      "prompt": "What's your schedule pattern?",
+      "type": "choice",
+      "options": [
+        "Week on, week off",
+        "2-2-3",
+        "Weekdays and weekends",
+        "Something else"
+      ],
+      "reaction": "Got it. Handoffs go on the calendar."
+    },
+    {
+      "id": "decisions",
+      "prompt": "Which decisions do you share?",
+      "type": "multi_choice",
+      "options": [
+        "School",
+        "Health appointments",
+        "Activities",
+        "Money for the kids",
+        "Holidays"
+      ],
+      "reaction": "Those go on the monthly agenda."
+    },
+    {
+      "id": "tone",
+      "prompt": "What tone works best between you?",
+      "type": "choice",
+      "options": [
+        "Friendly",
+        "Brief and businesslike",
+        "Neutral"
+      ],
+      "reaction": "Agendas and messages will match."
+    },
+    {
+      "id": "co_parent",
+      "prompt": "Invite your co-parent to see the shared plan?",
+      "type": "text",
+      "reaction": "They'll see only what you choose.",
+      "optional": true
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap a monthly check-in slot.",
+      "type": "calendar_slots",
+      "reaction": "Check-in placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Set up",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Handoff checklist agreed",
+          "Shared calendar set"
+        ],
+        "actions": [
+          "Handoff checklist (bags, meds, homework, notes)",
+          "List shared decisions"
+        ]
+      },
+      {
+        "name": "Rhythm",
+        "weeks": "3-12",
+        "benchmarks": [
+          "Monthly check-ins held"
+        ],
+        "actions": [
+          "Handoff reminders",
+          "Monthly check-in agenda",
+          "Decision log"
+        ]
+      }
+    ],
+    "calendar": "Handoff reminders with the checklist, and a monthly check-in at the chosen slot with an agenda attached."
+  },
+  "approach_variants": {
+    "habit": "Same checklist every handoff; streak of smooth handoffs.",
+    "willpower": "Monthly challenge: settle one open decision.",
+    "time": "Handoffs and check-ins are calendar blocks with times.",
+    "reward": "Pick a small treat for yourself after each check-in.",
+    "resource": "First weeks gather school calendars, medical info and contacts in one place."
+  },
+  "tracked_fields": [
+    {
+      "id": "checkins",
+      "label": "Check-ins held",
+      "kind": "number",
+      "unit": "check-ins",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "notes",
+      "label": "Private notes",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "GoalKin offers prompts and planning, not counselling or therapy. If things feel stuck or painful, a licensed counsellor can help.",
+    "If you ever feel unsafe with someone, put your safety first and contact local emergency services or a support line.",
+    "GoalKin is not legal advice and does not replace a parenting plan or court order.",
+    "Children's details stay private by default.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed check-in is offered again the next week with a shorter agenda. If check-ins stall for two months, the plan suggests a written update instead of a meeting.",
+  "addon_tracks": [
+    "Suggested: Calm Co-Parenting Messages Guide"
+  ],
+  "creator": {
+    "id": "goalkin",
+    "revenue_share": 0.7,
+    "license": "GoalKin launch template; replaced when a creator version is approved"
+  },
+  "price_log": [
+    {
+      "from": null,
+      "to": 19,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

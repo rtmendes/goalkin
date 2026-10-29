@@ -1,0 +1,169 @@
+{
+  "id": "weekly-date-night",
+  "name": "Weekly date night",
+  "area": "Relationships",
+  "tier": "Premium",
+  "price": 19,
+  "summary": "Keep a weekly date night with a year of date ideas by season and holds on your calendar.",
+  "duration": "52 weeks",
+  "onboarding": [
+    {
+      "id": "budget",
+      "prompt": "Budget per date?",
+      "type": "slider",
+      "min": 0,
+      "max": 200,
+      "reaction": "Great dates come at every price, including free."
+    },
+    {
+      "id": "nights",
+      "prompt": "Which nights are usually free?",
+      "type": "multi_choice",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "reaction": "Date nights go there."
+    },
+    {
+      "id": "enjoy",
+      "prompt": "What do you both enjoy?",
+      "type": "multi_choice",
+      "options": [
+        "Food",
+        "Outdoors",
+        "Music and shows",
+        "Games",
+        "Learning something new",
+        "Staying in"
+      ],
+      "reaction": "Fun mix. We'll rotate them by season."
+    },
+    {
+      "id": "childcare",
+      "prompt": "Need childcare lined up?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "Sometimes",
+        "No"
+      ],
+      "reaction": "We'll add a reminder to book it."
+    },
+    {
+      "id": "partner",
+      "prompt": "Invite your partner to see the plan?",
+      "type": "text",
+      "reaction": "They'll see only what you share.",
+      "optional": true
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap the date-night slot.",
+      "type": "calendar_slots",
+      "reaction": "Weekly hold placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Spring",
+        "weeks": "1-13",
+        "benchmarks": [
+          "10 of 13 dates kept"
+        ],
+        "actions": [
+          "Weekly calendar hold",
+          "Seasonal ideas within budget",
+          "Childcare reminder if needed"
+        ]
+      },
+      {
+        "name": "Summer",
+        "weeks": "14-26",
+        "benchmarks": [
+          "10 of 13 dates kept"
+        ],
+        "actions": [
+          "Outdoor and long-evening ideas",
+          "One bigger date this season"
+        ]
+      },
+      {
+        "name": "Autumn",
+        "weeks": "27-39",
+        "benchmarks": [
+          "10 of 13 dates kept"
+        ],
+        "actions": [
+          "Cosy and stay-in ideas",
+          "Mid-year reflection together"
+        ]
+      },
+      {
+        "name": "Winter",
+        "weeks": "40-52",
+        "benchmarks": [
+          "10 of 13 dates kept"
+        ],
+        "actions": [
+          "Holiday and indoor ideas",
+          "Year-end reflection and plan for next year"
+        ]
+      }
+    ],
+    "calendar": "A weekly hold on the chosen night, an idea card two days ahead, and a childcare reminder when needed. Seasons start from your start date."
+  },
+  "approach_variants": {
+    "habit": "Same night every week; streak of weeks with a date.",
+    "willpower": "Seasonal challenge: try one brand-new thing each month.",
+    "time": "Date night plus 10 minutes of planning as calendar blocks.",
+    "reward": "Every 10 dates unlocks a bigger date you've both picked.",
+    "resource": "First week lines up a babysitter list, a budget and a shared ideas list."
+  },
+  "tracked_fields": [
+    {
+      "id": "dates",
+      "label": "Dates done",
+      "kind": "number",
+      "unit": "dates",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "felt",
+      "label": "How it felt",
+      "kind": "rating",
+      "unit": "1 to 5",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "spent",
+      "label": "Spent",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "GoalKin offers prompts and planning, not counselling or therapy. If things feel stuck or painful, a licensed counsellor can help.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A missed week moves the idea to the next week; no guilt. Two missed weeks suggest a 20-minute at-home date to restart.",
+  "addon_tracks": [
+    "Suggested: Couples Conversation Cards"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 19,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

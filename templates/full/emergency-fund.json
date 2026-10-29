@@ -1,0 +1,139 @@
+{
+  "id": "emergency-fund",
+  "name": "Emergency fund",
+  "area": "Wealth",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Build an emergency fund with a set-aside schedule tied to payday and milestone dates along the way.",
+  "duration": "Set by your target, usually 3 to 12 months",
+  "onboarding": [
+    {
+      "id": "target_type",
+      "prompt": "How do you want to set the target?",
+      "type": "choice",
+      "options": [
+        "A dollar amount",
+        "Months of expenses"
+      ],
+      "reaction": "Either way, we'll turn it into dates."
+    },
+    {
+      "id": "target",
+      "prompt": "What's the target (amount, or number of months)?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Got it. Big or small, it gets broken into bites."
+    },
+    {
+      "id": "monthly",
+      "prompt": "How much room do you have to save each month?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Every bit counts. We'll show the finish date."
+    },
+    {
+      "id": "payday",
+      "prompt": "When does money usually come in?",
+      "type": "choice",
+      "options": [
+        "Weekly",
+        "Every two weeks",
+        "Twice a month",
+        "Monthly",
+        "It varies"
+      ],
+      "reaction": "Perfect. Transfers line up right after payday."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap a time on payday to move money to savings.",
+      "type": "calendar_slots",
+      "reaction": "Reminder set. Two minutes, every payday."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Set up",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Savings spot chosen and first transfer made"
+        ],
+        "actions": [
+          "Pick a separate savings account or envelope",
+          "Set an automatic transfer if your bank offers one",
+          "Decide what counts as an emergency"
+        ]
+      },
+      {
+        "name": "First milestone",
+        "weeks": "3-12",
+        "benchmarks": [
+          "First $500 or one week of expenses saved"
+        ],
+        "actions": [
+          "Transfer every payday",
+          "Monthly check: on track, ahead or behind"
+        ]
+      },
+      {
+        "name": "Keep going",
+        "weeks": "13-52",
+        "benchmarks": [
+          "25%, 50%, 75% and 100% milestones"
+        ],
+        "actions": [
+          "Transfers continue",
+          "Quarterly review of the target as life changes"
+        ]
+      }
+    ],
+    "calendar": "A short transfer reminder on each payday, a monthly check-in, and milestone dates calculated from the target and monthly amount."
+  },
+  "approach_variants": {
+    "habit": "Same transfer every payday, set to automatic where possible; streak of paydays saved.",
+    "willpower": "Monthly savings challenge (for example a no-takeout week added to the fund).",
+    "time": "Every transfer and review is a calendar block; monthly time-and-money review.",
+    "reward": "Owner-picked small reward at each 25% milestone.",
+    "resource": "First steps open the savings spot, list monthly expenses and find one cost to trim."
+  },
+  "tracked_fields": [
+    {
+      "id": "saved",
+      "label": "Amount saved",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    },
+    {
+      "id": "percent",
+      "label": "Percent to target",
+      "kind": "percent",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "transfers",
+      "label": "Paydays saved on",
+      "kind": "number",
+      "unit": "transfers",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "This plan is general education, not financial advice. Check big decisions with a qualified professional.",
+    "Account numbers and log-ins are never asked for; you enter only the totals you choose.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A skipped payday is fine; the plan recalculates the finish date instead of asking for a double transfer. If savings are used for a real emergency, the plan celebrates that it worked and rebuilds from the new balance.",
+  "addon_tracks": [
+    "Suggested: Simple Budget Starter Kit"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}
