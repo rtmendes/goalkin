@@ -1,0 +1,140 @@
+{
+  "id": "ask-for-a-raise",
+  "name": "Ask for a raise",
+  "area": "Work and career",
+  "tier": "Premium",
+  "price": 14,
+  "summary": "Prepare to ask for a raise with an evidence log of your wins, rehearsal sessions and a clear ask script.",
+  "duration": "4 to 8 weeks",
+  "onboarding": [
+    {
+      "id": "pay",
+      "prompt": "Current pay (optional, stays private)?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Kept private. It just helps frame the ask.",
+      "optional": true
+    },
+    {
+      "id": "review_date",
+      "prompt": "When's your review or the meeting you want?",
+      "type": "date",
+      "reaction": "Great. We'll be ready a week early."
+    },
+    {
+      "id": "wins",
+      "prompt": "Name a few wins so far this year.",
+      "type": "text",
+      "reaction": "Those are real. Let's log them properly."
+    },
+    {
+      "id": "research",
+      "prompt": "Do you know the typical pay range for your role?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "Roughly",
+        "Not yet"
+      ],
+      "reaction": "We'll add a research step either way."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap times for weekly prep and two rehearsals.",
+      "type": "calendar_slots",
+      "reaction": "Prep sessions set."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Gather evidence",
+        "weeks": "1-3",
+        "benchmarks": [
+          "10 wins logged with results",
+          "Pay range researched"
+        ],
+        "actions": [
+          "Log a win each week",
+          "Collect feedback or kind emails",
+          "Research the pay range for your role and area"
+        ]
+      },
+      {
+        "name": "Shape the ask",
+        "weeks": "3-5",
+        "benchmarks": [
+          "Script written",
+          "Two rehearsals done"
+        ],
+        "actions": [
+          "Write the ask in three sentences",
+          "Rehearse with a friend or out loud",
+          "Plan answers to likely questions"
+        ]
+      },
+      {
+        "name": "Ask and follow up",
+        "weeks": "5-8",
+        "benchmarks": [
+          "Meeting held",
+          "Follow-up note sent"
+        ],
+        "actions": [
+          "The ask",
+          "Follow-up email within a day",
+          "Next step plan whatever the answer"
+        ]
+      }
+    ],
+    "calendar": "Weekly evidence-log reminders, two rehearsal blocks before the review date, the meeting itself, and a follow-up reminder the next day."
+  },
+  "approach_variants": {
+    "habit": "Log one win every Friday; streak of weeks logged.",
+    "willpower": "Countdown to the meeting with a rehearsal challenge.",
+    "time": "Prep, rehearsal and follow-up as calendar blocks.",
+    "reward": "Owner-chosen treat after the meeting, whatever the answer.",
+    "resource": "First week gathers performance reviews, metrics and pay data."
+  },
+  "tracked_fields": [
+    {
+      "id": "wins",
+      "label": "Wins logged",
+      "kind": "number",
+      "unit": "wins",
+      "default_visibility": "private"
+    },
+    {
+      "id": "rehearsals",
+      "label": "Rehearsals",
+      "kind": "number",
+      "unit": "rehearsals",
+      "default_visibility": "private"
+    },
+    {
+      "id": "pay",
+      "label": "Current pay",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "This is personal growth, kept outside any employer's tools; nothing is shared with your workplace.",
+    "Pay figures stay private by default; you choose if anyone ever sees them.",
+    "The plan helps you prepare; the decision rests with your employer.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "If the meeting date moves, the plan re-spaces rehearsals before the new date. A missed log week simply prompts two wins the next week.",
+  "addon_tracks": [
+    "Suggested: Negotiation Confidence Track"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 14,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

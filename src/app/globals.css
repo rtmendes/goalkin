@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* GoalKin brand: Ink Navy #14213D, Champagne Gold #C9A86A, Ember Coral #FF6B4A,
+   Steady Sage #2F7D6D, Ivory #F7F3EC. Text colors are darkened/lightened variants
+   chosen to keep at least 4.5:1 contrast; the pure brand hues are for fills and accents. */
+:root {
+  --bg: #f7f3ec;
+  --surface: #ffffff;
+  --surface-2: #efe9de;
+  --ink: #14213d;
+  --muted: #4a5468;
+  --line: #d9d1c3;
+  --navy: #14213d;
+  --gold: #c9a86a;
+  --gold-ink: #7a5c22;
+  --coral: #ff6b4a;
+  --coral-ink: #b23a1e;
+  --sage: #2f7d6d;
+  --sage-ink: #24604f;
+  --on-accent: #ffffff;
+  --focus: #1f6feb;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1526;
+    --surface: #14213d;
+    --surface-2: #1b2b4d;
+    --ink: #f7f3ec;
+    --muted: #b9c0cf;
+    --line: #2c3d63;
+    --gold-ink: #e3c78f;
+    --coral-ink: #ff9a82;
+    --sage-ink: #7cc8b5;
+    --focus: #79b8ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1526;
+  --surface: #14213d;
+  --surface-2: #1b2b4d;
+  --ink: #f7f3ec;
+  --muted: #b9c0cf;
+  --line: #2c3d63;
+  --gold-ink: #e3c78f;
+  --coral-ink: #ff9a82;
+  --sage-ink: #7cc8b5;
+  --focus: #79b8ff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-navy: var(--navy);
+  --color-gold: var(--gold);
+  --color-gold-ink: var(--gold-ink);
+  --color-coral: var(--coral);
+  --color-coral-ink: var(--coral-ink);
+  --color-sage: var(--sage);
+  --color-sage-ink: var(--sage-ink);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-fun: var(--font-nunito), system-ui, sans-serif;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+.sr-only-focusable:not(:focus) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }

@@ -1,0 +1,133 @@
+{
+  "id": "charity-fundraiser",
+  "name": "Charity fundraiser",
+  "area": "Giving and community",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Run a charity fundraiser with an ask schedule, update posts and a thank-you list.",
+  "duration": "Set by your event date",
+  "onboarding": [
+    {
+      "id": "cause",
+      "prompt": "What cause?",
+      "type": "text",
+      "reaction": "A great one."
+    },
+    {
+      "id": "target",
+      "prompt": "Target amount?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Let's plan the asks."
+    },
+    {
+      "id": "date",
+      "prompt": "Event or end date?",
+      "type": "date",
+      "reaction": "Date set."
+    },
+    {
+      "id": "platform",
+      "prompt": "How will people give?",
+      "type": "choice",
+      "options": [
+        "Charity's own page",
+        "Fundraising site",
+        "In person",
+        "Not sure yet"
+      ],
+      "reaction": "Noted."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap times for asks and updates.",
+      "type": "calendar_slots",
+      "reaction": "Placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Set up",
+        "weeks": "1",
+        "benchmarks": [
+          "Page live",
+          "Ask list done"
+        ],
+        "actions": [
+          "Confirm the charity and giving page",
+          "List 30 people to ask"
+        ]
+      },
+      {
+        "name": "Ask",
+        "weeks": "2-5",
+        "benchmarks": [
+          "Asks made on schedule"
+        ],
+        "actions": [
+          "Weekly asks",
+          "Update posts"
+        ]
+      },
+      {
+        "name": "Push and thank",
+        "weeks": "6-8",
+        "benchmarks": [
+          "Event held",
+          "Thank-yous sent"
+        ],
+        "actions": [
+          "Final push",
+          "Thank-you list"
+        ]
+      }
+    ],
+    "calendar": "Ask slots, weekly update posts, the event date, and a thank-you session afterwards."
+  },
+  "approach_variants": {
+    "habit": "Two or three asks a day at the same time; streak of ask days.",
+    "willpower": "Matching challenge with a friend or sponsor and a countdown to the event.",
+    "time": "Asks, posts and thank-yous each get a calendar block; weekly review.",
+    "reward": "Owner-chosen reward at 25%, 50% and 100% of the target.",
+    "resource": "First week gathers the cause story, photos, the giving page and the ask list."
+  },
+  "tracked_fields": [
+    {
+      "id": "raised",
+      "label": "Amount raised",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    },
+    {
+      "id": "percent",
+      "label": "Percent of target",
+      "kind": "percent",
+      "default_visibility": "public"
+    },
+    {
+      "id": "donors",
+      "label": "Donors",
+      "kind": "number",
+      "unit": "donors",
+      "default_visibility": "public"
+    }
+  ],
+  "guardrails": [
+    "Use the charity's official giving page; GoalKin does not collect donations.",
+    "Donor names and amounts stay private unless each donor agrees to be thanked publicly.",
+    "Amounts raised start private; share the percent or turn on the amount when you choose.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed asks roll into the next week's list.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

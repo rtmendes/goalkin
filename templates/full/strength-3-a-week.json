@@ -1,0 +1,151 @@
+{
+  "id": "strength-3-a-week",
+  "name": "Strength 3× a week",
+  "area": "Health",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Strength train three times a week with a progressive routine, set training days and planned lighter weeks.",
+  "duration": "12 weeks",
+  "onboarding": [
+    {
+      "id": "equipment",
+      "prompt": "Where will you train?",
+      "type": "choice",
+      "options": [
+        "Home, bodyweight only",
+        "Home with dumbbells or bands",
+        "Gym"
+      ],
+      "reaction": "Perfect. We'll pick moves that fit your space."
+    },
+    {
+      "id": "experience",
+      "prompt": "How much lifting have you done?",
+      "type": "choice",
+      "options": [
+        "New to it",
+        "Some, on and off",
+        "Regular for a year or more"
+      ],
+      "reaction": "Good. We'll start where you are."
+    },
+    {
+      "id": "minutes",
+      "prompt": "Minutes per session?",
+      "type": "slider",
+      "min": 20,
+      "max": 75,
+      "reaction": "Thirty focused minutes does plenty."
+    },
+    {
+      "id": "limits",
+      "prompt": "Any injuries or moves to avoid?",
+      "type": "text",
+      "reaction": "Thanks. We'll swap those out.",
+      "optional": true
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap three training slots with a day between them.",
+      "type": "calendar_slots",
+      "reaction": "Three sessions placed, rest days protected."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Learn the moves",
+        "weeks": "1-4",
+        "benchmarks": [
+          "Complete 10 of 12 sessions",
+          "Comfortable with each main movement"
+        ],
+        "actions": [
+          "Full-body sessions: push, pull, squat, hinge, carry",
+          "Light loads, focus on form",
+          "Lighter week in week 4"
+        ]
+      },
+      {
+        "name": "Progress",
+        "weeks": "5-8",
+        "benchmarks": [
+          "Add reps or load on main lifts most weeks"
+        ],
+        "actions": [
+          "Same structure, small increases",
+          "Lighter (deload) week in week 8"
+        ]
+      },
+      {
+        "name": "Own it",
+        "weeks": "9-12",
+        "benchmarks": [
+          "Repeat week-1 workout and compare",
+          "Choose next block"
+        ],
+        "actions": [
+          "Progression continues",
+          "Lighter week in week 12",
+          "Reflection and next-block plan"
+        ]
+      }
+    ],
+    "calendar": "Three sessions a week on the chosen slots with a rest day between each; every fourth week is marked as a lighter deload week."
+  },
+  "approach_variants": {
+    "habit": "Same three days every week, stacked on a regular cue (after work); session streak.",
+    "willpower": "Monthly personal-best challenge on one lift, inside planned increases.",
+    "time": "Each session is a calendar block with warm-up time; weekly minutes review.",
+    "reward": "Owner-chosen reward after each 4-week block.",
+    "resource": "Week one gathers equipment or a gym pass, a simple log and a form-check video or coach."
+  },
+  "tracked_fields": [
+    {
+      "id": "sessions",
+      "label": "Sessions done",
+      "kind": "number",
+      "unit": "sessions",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "lifts",
+      "label": "Main lift numbers",
+      "kind": "note",
+      "unit": "load and reps",
+      "default_visibility": "private"
+    },
+    {
+      "id": "minutes",
+      "label": "Minutes trained",
+      "kind": "duration",
+      "unit": "minutes",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "effort",
+      "label": "How hard it felt",
+      "kind": "rating",
+      "unit": "1 to 5",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Talk to your doctor before starting. GoalKin offers education, not medical advice.",
+    "Stop any movement that causes sharp pain and get it checked before continuing.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A missed session moves to the next free day if it keeps a rest day between sessions; otherwise it is skipped. After a missed week, the plan repeats the previous week at the same load. After two or more weeks off, loads drop back for one week.",
+  "addon_tracks": [
+    "Suggested: Mobility in 10 Minutes Track"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

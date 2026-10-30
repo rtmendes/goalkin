@@ -1,0 +1,106 @@
+{
+  "id": "gratitude-journal",
+  "name": "Gratitude journal",
+  "area": "Faith and spirit",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Keep a gratitude journal with 30 or 90 days of prompts at the time of day you choose.",
+  "duration": "30 or 90 days",
+  "onboarding": [
+    {
+      "id": "length",
+      "prompt": "30 days or 90?",
+      "type": "choice",
+      "options": [
+        "30 days",
+        "90 days"
+      ],
+      "reaction": "Great choice."
+    },
+    {
+      "id": "time",
+      "prompt": "Morning or evening?",
+      "type": "choice",
+      "options": [
+        "Morning",
+        "Evening"
+      ],
+      "reaction": "Prompts land then."
+    },
+    {
+      "id": "style",
+      "prompt": "What prompt style?",
+      "type": "choice",
+      "options": [
+        "Simple lists",
+        "Short reflections",
+        "Faith-based",
+        "Mixed"
+      ],
+      "reaction": "We'll keep them fresh."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your journaling time.",
+      "type": "calendar_slots",
+      "reaction": "Prompt time set."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "First stretch",
+        "weeks": "1-4",
+        "benchmarks": [
+          "Entries on most days"
+        ],
+        "actions": [
+          "Daily prompt"
+        ]
+      },
+      {
+        "name": "Deepen",
+        "weeks": "5-13",
+        "benchmarks": [
+          "Entries on most days",
+          "Monthly look-back"
+        ],
+        "actions": [
+          "Daily prompt (90-day plan)",
+          "Monthly reflection"
+        ]
+      }
+    ],
+    "calendar": "A daily prompt at the chosen time and a monthly look-back."
+  },
+  "approach_variants": {
+    "habit": "Journal right after an existing habit (bedtime, first coffee); streak of entries.",
+    "willpower": "Challenge: five gratitudes a day for a week, with a countdown to day 30 or 90.",
+    "time": "Journaling as a fixed calendar block; weekly review.",
+    "reward": "Look-back at each milestone with an owner-chosen treat.",
+    "resource": "First day sets up a notebook or note app and a spot to write."
+  },
+  "tracked_fields": [
+    {
+      "id": "entries",
+      "label": "Entries",
+      "kind": "number",
+      "unit": "entries",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Entries are private by default and never shared without your choice.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed days aren't counted against you; the next prompt continues where you left off.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

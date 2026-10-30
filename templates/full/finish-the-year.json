@@ -1,0 +1,160 @@
+{
+  "id": "finish-the-year",
+  "name": "Finish the Year",
+  "area": "Learning and growth",
+  "tier": "Premium",
+  "price": 37,
+  "summary": "A six-week sprint from late November to December 31 to finish one goal you started this year, with weekly benchmarks and someone in your corner.",
+  "duration": "Nov 20 to Dec 31 (6 weeks)",
+  "onboarding": [
+    {
+      "id": "goal",
+      "prompt": "Which goal are you carrying over the line?",
+      "type": "text",
+      "reaction": "That one. Let's make it real."
+    },
+    {
+      "id": "area",
+      "prompt": "Which area is it in?",
+      "type": "choice",
+      "options": [
+        "Health",
+        "Wealth",
+        "Work and career",
+        "Relationships",
+        "Faith and spirit",
+        "Learning and growth",
+        "Home and life",
+        "Giving and community"
+      ],
+      "reaction": "Got it. We'll use the matching guardrails."
+    },
+    {
+      "id": "finish_line",
+      "prompt": "What does done look like by Dec 31?",
+      "type": "text",
+      "reaction": "Clear finish lines are easier to cross."
+    },
+    {
+      "id": "hours",
+      "prompt": "How many hours a week can you give it?",
+      "type": "slider",
+      "min": 1,
+      "max": 15,
+      "reaction": "We'll only plan the time you give us."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap the times you'll work on it.",
+      "type": "calendar_slots",
+      "reaction": "Locked in on your calendar."
+    },
+    {
+      "id": "buddy",
+      "prompt": "Who's in your corner?",
+      "type": "choice",
+      "options": [
+        "Just me for now",
+        "One partner",
+        "A small group"
+      ],
+      "optional": true
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Take stock",
+        "weeks": "1",
+        "benchmarks": [
+          "Finish line written and the remaining work listed"
+        ],
+        "actions": [
+          "List what's left",
+          "Cut anything that won't fit by Dec 31",
+          "Block your work sessions"
+        ]
+      },
+      {
+        "name": "Sprint",
+        "weeks": "2-4",
+        "benchmarks": [
+          "Half of the remaining work done by the end of week 4"
+        ],
+        "actions": [
+          "Planned work sessions",
+          "Friday check-in with your partner or circle"
+        ]
+      },
+      {
+        "name": "Holiday-proof stretch",
+        "weeks": "5",
+        "benchmarks": [
+          "A holiday-week plan that keeps at least two short sessions"
+        ],
+        "actions": [
+          "Short sessions around travel and family time",
+          "If-then plan for missed days"
+        ]
+      },
+      {
+        "name": "Finish line",
+        "weeks": "6",
+        "benchmarks": [
+          "Goal marked finished or a clear carry-over plan for January"
+        ],
+        "actions": [
+          "Final push",
+          "Year-end reflection",
+          "Share your finish card if you want to"
+        ]
+      }
+    ],
+    "calendar": "Work sessions at your chosen slots, a Friday check-in each week, and a Dec 31 finish-line event."
+  },
+  "approach_variants": {
+    "habit": "A small daily session at the same time, streak tracked through the holidays.",
+    "willpower": "A countdown to Dec 31 with a weekly challenge from your partner.",
+    "time": "Every session is a calendar block; Sunday review of planned vs actual time.",
+    "reward": "A reward you pick for each weekly benchmark and a bigger one at the finish.",
+    "resource": "Week 1 gathers what you need (tools, help, money) before the sprint starts."
+  },
+  "tracked_fields": [
+    {
+      "id": "sessions",
+      "label": "Work sessions done",
+      "kind": "number",
+      "unit": "sessions",
+      "default_visibility": "private"
+    },
+    {
+      "id": "percent",
+      "label": "Percent of what's left done",
+      "kind": "percent",
+      "unit": "%",
+      "default_visibility": "private"
+    },
+    {
+      "id": "reflection",
+      "label": "What moved me forward",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Plans are suggestions. You choose every step and can change or remove any of them.",
+    "Health goals add a 'talk to your doctor' step; money goals carry a not-financial-advice notice. GoalKin offers education, not medical or financial advice."
+  ],
+  "restart_rules": "Miss a session: do a 15-minute version the next day. Miss a week: the plan shrinks to the single most important piece and the finish line can move to a January carry-over plan.",
+  "addon_tracks": [
+    "Suggested: New Year Reset (January)"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 37,
+      "basis": "Launch program price per docs/PRD.md and docs/DECISIONS.md #8; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

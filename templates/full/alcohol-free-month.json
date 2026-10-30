@@ -1,0 +1,146 @@
+{
+  "id": "alcohol-free-month",
+  "name": "Alcohol-free month",
+  "area": "Health",
+  "tier": "Premium",
+  "price": 14,
+  "summary": "Take a month off alcohol with a night-by-night plan, drink swaps and scripts for social events.",
+  "duration": "30 days",
+  "onboarding": [
+    {
+      "id": "start",
+      "prompt": "When does your alcohol-free month start?",
+      "type": "date",
+      "reaction": "Day one is on the calendar."
+    },
+    {
+      "id": "nights",
+      "prompt": "Which nights do you usually drink?",
+      "type": "multi_choice",
+      "options": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "reaction": "Thanks. Those nights get extra support."
+    },
+    {
+      "id": "events",
+      "prompt": "Any social events coming up this month?",
+      "type": "text",
+      "reaction": "We'll write you an easy script for each one.",
+      "optional": true
+    },
+    {
+      "id": "swaps",
+      "prompt": "Which swaps sound good?",
+      "type": "multi_choice",
+      "options": [
+        "Sparkling water with citrus",
+        "Alcohol-free beer or wine",
+        "Herbal tea",
+        "Mocktails",
+        "A walk instead"
+      ],
+      "reaction": "Great picks. We'll stock the plan with them."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap the time of evening you'd like a check-in nudge.",
+      "type": "calendar_slots",
+      "reaction": "Nudge set for your usual drinking nights."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "First week",
+        "weeks": "1",
+        "benchmarks": [
+          "Seven alcohol-free days"
+        ],
+        "actions": [
+          "Talk to your doctor before starting if you drink daily or heavily",
+          "Evening swap on usual drinking nights",
+          "Remove or move alcohol at home"
+        ]
+      },
+      {
+        "name": "Middle stretch",
+        "weeks": "2-3",
+        "benchmarks": [
+          "Alcohol-free through at least one social event"
+        ],
+        "actions": [
+          "Event scripts ready a day ahead",
+          "Weekly reflection on sleep, mood and money kept"
+        ]
+      },
+      {
+        "name": "Finish and decide",
+        "weeks": "4-5",
+        "benchmarks": [
+          "Day 30 reached",
+          "Decide what comes next"
+        ],
+        "actions": [
+          "End-of-month reflection",
+          "Choose: keep going, cut back, or return with a plan"
+        ]
+      }
+    ],
+    "calendar": "An evening check-in on usual drinking nights, a script reminder the day before each social event, and a day-30 reflection."
+  },
+  "approach_variants": {
+    "habit": "A new evening ritual replaces the drink at the same time each night; alcohol-free streak.",
+    "willpower": "30-day countdown with a partner dare for the toughest weekend.",
+    "time": "Evenings planned as calendar blocks with an activity in each.",
+    "reward": "Money not spent on drinks set aside toward an owner-chosen reward.",
+    "resource": "First days stock swaps, plan who to tell, and save support line numbers."
+  },
+  "tracked_fields": [
+    {
+      "id": "af_days",
+      "label": "Alcohol-free days",
+      "kind": "number",
+      "unit": "days",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "cravings",
+      "label": "Cravings",
+      "kind": "rating",
+      "unit": "1 to 5",
+      "default_visibility": "private"
+    },
+    {
+      "id": "notes",
+      "label": "Notes",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Talk to your doctor before starting. GoalKin offers education, not medical advice.",
+    "If you drink daily or heavily, stopping suddenly can be unsafe. Get medical advice first rather than stopping on your own.",
+    "If you're struggling, contact your doctor or a local support line. GoalKin is not a treatment program.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A drink doesn't end the month. The plan logs it privately, asks what made that night hard, adds support for similar nights, and the count continues from the next day.",
+  "addon_tracks": [
+    "Suggested: Mocktail and Swap Recipe Pack"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 14,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "id": "career-switch",
+  "name": "Career switch",
+  "area": "Work and career",
+  "tier": "Premium",
+  "price": 29,
+  "summary": "Plan a move to a new role by mapping skill gaps, building portfolio pieces and setting weekly outreach targets.",
+  "duration": "12 to 24 weeks",
+  "onboarding": [
+    {
+      "id": "current",
+      "prompt": "What's your current role?",
+      "type": "text",
+      "reaction": "Thanks. That experience carries over more than you think."
+    },
+    {
+      "id": "target",
+      "prompt": "What role are you aiming for?",
+      "type": "text",
+      "reaction": "Great target. Let's map the gap."
+    },
+    {
+      "id": "hours",
+      "prompt": "Hours a week you can give the switch?",
+      "type": "slider",
+      "min": 2,
+      "max": 20,
+      "reaction": "Steady hours win here."
+    },
+    {
+      "id": "deadline",
+      "prompt": "When would you like to be in the new role?",
+      "type": "date",
+      "reaction": "Deadline set. We'll pace it out.",
+      "optional": true
+    },
+    {
+      "id": "strengths",
+      "prompt": "Where do you feel strongest already?",
+      "type": "multi_choice",
+      "options": [
+        "Skills",
+        "Network",
+        "Portfolio or examples",
+        "Interviewing",
+        "Not sure yet"
+      ],
+      "reaction": "Good. We'll lead with those."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your weekly career-switch slots.",
+      "type": "calendar_slots",
+      "reaction": "Blocks placed. This is your time."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Map the gap",
+        "weeks": "1-3",
+        "benchmarks": [
+          "Skill gap list written",
+          "5 target companies or teams picked"
+        ],
+        "actions": [
+          "Read 10 job posts for the target role",
+          "List skills you have and skills to build",
+          "Talk to 2 people in the role"
+        ]
+      },
+      {
+        "name": "Build proof",
+        "weeks": "4-12",
+        "benchmarks": [
+          "2 to 3 portfolio pieces done",
+          "Key skill course or project underway"
+        ],
+        "actions": [
+          "Weekly learning block",
+          "One portfolio piece every few weeks",
+          "Update CV and profile"
+        ]
+      },
+      {
+        "name": "Reach out",
+        "weeks": "8-20",
+        "benchmarks": [
+          "Weekly outreach target hit most weeks",
+          "Applications and conversations growing"
+        ],
+        "actions": [
+          "Informational chats",
+          "Tailored applications",
+          "Interview practice"
+        ]
+      },
+      {
+        "name": "Land and reflect",
+        "weeks": "20-24",
+        "benchmarks": [
+          "Offer, or a re-plan with what you learned"
+        ],
+        "actions": [
+          "Compare offers",
+          "Plan the first 90 days",
+          "Reflection"
+        ]
+      }
+    ],
+    "calendar": "Weekly learning and portfolio blocks, outreach slots with follow-up reminders, and a weekly review. Phases stretch or shrink with your deadline."
+  },
+  "approach_variants": {
+    "habit": "Same two blocks each week; streak of weeks with one outreach and one learning session.",
+    "willpower": "Weekly outreach challenge and a countdown to the deadline.",
+    "time": "Every task is a calendar block; weekly hours review.",
+    "reward": "Owner-chosen rewards after each portfolio piece and first interview.",
+    "resource": "First weeks gather tools: course, portfolio site, CV template, and people to ask."
+  },
+  "tracked_fields": [
+    {
+      "id": "applications",
+      "label": "Applications",
+      "kind": "number",
+      "unit": "applications",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "conversations",
+      "label": "Conversations",
+      "kind": "number",
+      "unit": "conversations",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "pieces",
+      "label": "Portfolio pieces done",
+      "kind": "number",
+      "unit": "pieces",
+      "default_visibility": "chosen"
+    },
+    {
+      "id": "companies",
+      "label": "Target companies",
+      "kind": "note",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "This is personal growth, kept outside any employer's tools; nothing is shared with your workplace.",
+    "This plan sets steps and targets; job outcomes depend on many things outside the plan.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps.",
+    "Product, app or recipe ideas are labeled as suggestions; any affiliate link is disclosed."
+  ],
+  "restart_rules": "A missed week keeps the phase where it is and moves the timeline back a week. After three quiet weeks, the plan offers a lighter weekly target or a new deadline.",
+  "addon_tracks": [
+    "Suggested: Portfolio Builder Track",
+    "Suggested: Interview Practice Kit"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 29,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

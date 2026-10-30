@@ -1,0 +1,123 @@
+{
+  "id": "neighborhood-project",
+  "name": "Neighborhood project",
+  "area": "Giving and community",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Organize a neighborhood project with a task list, sign-up roles and reminders for helpers.",
+  "duration": "Set by your project date",
+  "onboarding": [
+    {
+      "id": "project",
+      "prompt": "What's the project?",
+      "type": "text",
+      "reaction": "Love it."
+    },
+    {
+      "id": "helpers",
+      "prompt": "How many helpers do you need?",
+      "type": "number",
+      "min": 1,
+      "reaction": "Sign-up roles coming."
+    },
+    {
+      "id": "date",
+      "prompt": "Project date?",
+      "type": "date",
+      "reaction": "Set."
+    },
+    {
+      "id": "permission",
+      "prompt": "Need permission from the city, HOA or landowner?",
+      "type": "choice",
+      "options": [
+        "Yes",
+        "No",
+        "Not sure"
+      ],
+      "reaction": "We'll add a step if so."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap planning slots.",
+      "type": "calendar_slots",
+      "reaction": "Placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Plan",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Task list and roles"
+        ],
+        "actions": [
+          "Permissions",
+          "Supplies list"
+        ]
+      },
+      {
+        "name": "Recruit",
+        "weeks": "3-4",
+        "benchmarks": [
+          "Roles filled"
+        ],
+        "actions": [
+          "Sign-up link",
+          "Reminders"
+        ]
+      },
+      {
+        "name": "Do it",
+        "weeks": "5",
+        "benchmarks": [
+          "Project day"
+        ],
+        "actions": [
+          "Day-of checklist",
+          "Thank-yous"
+        ]
+      }
+    ],
+    "calendar": "Planning slots, sign-up reminders, project day, and a thank-you reminder. Weeks count back from the project date."
+  },
+  "approach_variants": {
+    "habit": "One small planning task each week on the same day.",
+    "willpower": "Recruiting challenge: fill every role by a date, with a countdown to project day.",
+    "time": "Planning tasks and project day are calendar blocks; weekly review.",
+    "reward": "A thank-you gathering for helpers after project day.",
+    "resource": "First weeks secure permissions, supplies and tools before recruiting."
+  },
+  "tracked_fields": [
+    {
+      "id": "tasks",
+      "label": "Tasks done",
+      "kind": "number",
+      "unit": "tasks",
+      "default_visibility": "public"
+    },
+    {
+      "id": "helpers",
+      "label": "Helpers signed up",
+      "kind": "number",
+      "unit": "helpers",
+      "default_visibility": "public"
+    }
+  ],
+  "guardrails": [
+    "For lifting, ladders, power tools or electrical and gas work, use proper safety gear and hire a licensed professional where required.",
+    "Helper names and contact details stay private; only counts are public by default.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Missed tasks move up; if the date is at risk, the plan suggests a new date.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "id": "club-challenge",
+  "name": "Club challenge",
+  "area": "Giving and community",
+  "tier": "Creator",
+  "price": 19,
+  "summary": "Run a club challenge with a shared plan and each member's own private layer of targets.",
+  "duration": "Set by your dates",
+  "onboarding": [
+    {
+      "id": "club",
+      "prompt": "Club name?",
+      "type": "text",
+      "reaction": "Welcome in."
+    },
+    {
+      "id": "goal",
+      "prompt": "Shared goal?",
+      "type": "text",
+      "reaction": "Love it."
+    },
+    {
+      "id": "start",
+      "prompt": "Start date?",
+      "type": "date",
+      "reaction": "Set."
+    },
+    {
+      "id": "end",
+      "prompt": "End date?",
+      "type": "date",
+      "reaction": "Set."
+    },
+    {
+      "id": "layers",
+      "prompt": "How should members set their own targets?",
+      "type": "choice",
+      "options": [
+        "Each member picks a target",
+        "Same target for everyone",
+        "Leader suggests, member adjusts"
+      ],
+      "reaction": "Member layers on."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap the weekly club check-in time.",
+      "type": "calendar_slots",
+      "reaction": "Check-in placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Kick-off",
+        "weeks": "1",
+        "benchmarks": [
+          "Members joined",
+          "Member targets set"
+        ],
+        "actions": [
+          "Invite members",
+          "Kick-off message"
+        ]
+      },
+      {
+        "name": "Challenge",
+        "weeks": "2-7",
+        "benchmarks": [
+          "Shared percent rising weekly"
+        ],
+        "actions": [
+          "Weekly check-in",
+          "Leader encouragement"
+        ]
+      },
+      {
+        "name": "Finish",
+        "weeks": "8",
+        "benchmarks": [
+          "Shared goal reached or reviewed"
+        ],
+        "actions": [
+          "Celebration",
+          "Reflection"
+        ]
+      }
+    ],
+    "calendar": "A weekly club check-in, kick-off and finish events. Week counts follow the chosen dates."
+  },
+  "approach_variants": {
+    "habit": "Each member gets a small daily action tied to their routine; member streaks.",
+    "willpower": "Team leaderboard for members who opt in, plus weekly club dares.",
+    "time": "Club sessions and each member's actions are calendar blocks.",
+    "reward": "A shared reward the club picks for the finish, plus personal rewards per member.",
+    "resource": "Kick-off week gathers supplies, buddies and the member list."
+  },
+  "tracked_fields": [
+    {
+      "id": "shared_percent",
+      "label": "Shared progress",
+      "kind": "percent",
+      "default_visibility": "circle"
+    },
+    {
+      "id": "member_layer",
+      "label": "My own target progress",
+      "kind": "number",
+      "unit": "set by member",
+      "default_visibility": "private"
+    }
+  ],
+  "guardrails": [
+    "Members choose their own visibility; the leader sees only what each member shares.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "Members who miss a week get a gentle nudge and a smaller next-week target.",
+  "addon_tracks": [],
+  "creator": {
+    "id": "goalkin",
+    "revenue_share": 0.7,
+    "license": "GoalKin launch template; replaced when a creator version is approved"
+  },
+  "price_log": [
+    {
+      "from": null,
+      "to": 19,
+      "basis": "Launch proposal per docs/MARKETPLACE.md; pending owner approval",
+      "date": "2026-10-29"
+    }
+  ]
+}

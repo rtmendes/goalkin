@@ -1,0 +1,136 @@
+{
+  "id": "save-for-a-big-goal",
+  "name": "Save for a big goal",
+  "area": "Wealth",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Save for something big, like a trip, car or down payment, with a monthly target and cut-or-earn options to close any gap.",
+  "duration": "Set by your deadline",
+  "onboarding": [
+    {
+      "id": "what",
+      "prompt": "What are you saving for?",
+      "type": "choice",
+      "options": [
+        "A trip",
+        "A car",
+        "A home down payment",
+        "Something else"
+      ],
+      "reaction": "Ooh, exciting. Let's give it a date."
+    },
+    {
+      "id": "what_detail",
+      "prompt": "Give it a name.",
+      "type": "text",
+      "reaction": "Named and claimed.",
+      "optional": true
+    },
+    {
+      "id": "amount",
+      "prompt": "How much do you need?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Big numbers get small when you split them up."
+    },
+    {
+      "id": "deadline",
+      "prompt": "When do you want it by?",
+      "type": "date",
+      "reaction": "Deadline set. We'll show the monthly number."
+    },
+    {
+      "id": "start_amount",
+      "prompt": "Already saved anything toward it?",
+      "type": "number",
+      "min": 0,
+      "reaction": "Nice head start.",
+      "optional": true
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap a time for a monthly savings check.",
+      "type": "calendar_slots",
+      "reaction": "Monthly check placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Size it",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Monthly target set",
+          "Gap (if any) has a cut-or-earn plan"
+        ],
+        "actions": [
+          "Calculate monthly target from amount and deadline",
+          "Pick cut options (subscriptions, eating out) and earn options (sell items, extra shifts)"
+        ]
+      },
+      {
+        "name": "Save",
+        "weeks": "3-48",
+        "benchmarks": [
+          "Monthly target met or gap plan used",
+          "25%, 50%, 75% milestones"
+        ],
+        "actions": [
+          "Monthly transfer",
+          "Monthly check-in",
+          "Re-plan if income changes"
+        ]
+      },
+      {
+        "name": "Finish",
+        "weeks": "49-52",
+        "benchmarks": [
+          "Goal reached or new date set"
+        ],
+        "actions": [
+          "Final transfer",
+          "Plan the purchase or trip",
+          "Reflection"
+        ]
+      }
+    ],
+    "calendar": "A monthly transfer reminder and check-in at the chosen slot, milestone dates, and the deadline. Phase lengths stretch or shrink with the deadline."
+  },
+  "approach_variants": {
+    "habit": "Automatic monthly transfer and a streak of months on target.",
+    "willpower": "Countdown to the deadline with a monthly cut-or-earn challenge.",
+    "time": "Monthly transfer and review blocks; quarterly time review.",
+    "reward": "A photo of the goal shown at each milestone, plus an owner-chosen mini reward.",
+    "resource": "First week opens a separate savings spot and lists cut-or-earn options."
+  },
+  "tracked_fields": [
+    {
+      "id": "saved",
+      "label": "Amount saved",
+      "kind": "money",
+      "unit": "USD",
+      "default_visibility": "private"
+    },
+    {
+      "id": "percent",
+      "label": "Percent to goal",
+      "kind": "percent",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "This plan is general education, not financial advice. Check big decisions with a qualified professional.",
+    "Account numbers and log-ins are never asked for; you enter only the totals you choose.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed month spreads the shortfall across the remaining months, or offers to move the deadline. After three missed months, the plan asks whether to pause, resize or change the goal.",
+  "addon_tracks": [],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}

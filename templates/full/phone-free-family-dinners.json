@@ -1,0 +1,126 @@
+{
+  "id": "phone-free-family-dinners",
+  "name": "Phone-free family dinners",
+  "area": "Relationships",
+  "tier": "Free",
+  "price": 0,
+  "summary": "Hold phone-free family dinners with a cooking rotation and conversation prompts for your kids' ages.",
+  "duration": "8 weeks, then ongoing",
+  "onboarding": [
+    {
+      "id": "nights",
+      "prompt": "How many phone-free dinners a week?",
+      "type": "slider",
+      "min": 1,
+      "max": 7,
+      "reaction": "Great start. Small and steady works."
+    },
+    {
+      "id": "ages",
+      "prompt": "Ages of kids at the table?",
+      "type": "multi_choice",
+      "options": [
+        "Under 5",
+        "5 to 8",
+        "9 to 12",
+        "Teens",
+        "No kids, just adults"
+      ],
+      "reaction": "Prompts will fit everyone."
+    },
+    {
+      "id": "cooks",
+      "prompt": "Who cooks (or could)?",
+      "type": "text",
+      "reaction": "Rotation coming up.",
+      "optional": true
+    },
+    {
+      "id": "phones",
+      "prompt": "Where will phones go?",
+      "type": "choice",
+      "options": [
+        "A basket",
+        "Another room",
+        "Face down on a shelf"
+      ],
+      "reaction": "Love it."
+    },
+    {
+      "id": "slots",
+      "prompt": "Tap your dinner times.",
+      "type": "calendar_slots",
+      "reaction": "Dinners placed."
+    }
+  ],
+  "plan_blueprint": {
+    "phases": [
+      {
+        "name": "Try it",
+        "weeks": "1-2",
+        "benchmarks": [
+          "Planned dinners held"
+        ],
+        "actions": [
+          "Phone basket set up",
+          "One prompt per dinner"
+        ]
+      },
+      {
+        "name": "Rotate",
+        "weeks": "3-6",
+        "benchmarks": [
+          "Planned dinners held most weeks"
+        ],
+        "actions": [
+          "Cooking or helping rotation",
+          "Kids pick a prompt once a week"
+        ]
+      },
+      {
+        "name": "Make it normal",
+        "weeks": "7-8",
+        "benchmarks": [
+          "Family picks what to keep"
+        ],
+        "actions": [
+          "Family reflection",
+          "Set the ongoing rhythm"
+        ]
+      }
+    ],
+    "calendar": "Dinner events on the chosen nights with that night's cook and a conversation prompt in the event notes."
+  },
+  "approach_variants": {
+    "habit": "Same nights every week; family streak.",
+    "willpower": "Family challenge: a full week of planned dinners.",
+    "time": "Dinner time blocked on everyone's calendar.",
+    "reward": "Family picks a shared treat after each streak of four weeks.",
+    "resource": "First week sets up the phone basket, a rotation chart and easy meals."
+  },
+  "tracked_fields": [
+    {
+      "id": "dinners",
+      "label": "Dinners held",
+      "kind": "number",
+      "unit": "dinners",
+      "default_visibility": "circle"
+    }
+  ],
+  "guardrails": [
+    "Kids' details stay private; only the dinner count is shared by default.",
+    "Every plan item can be edited, moved or removed, and you can add your own steps."
+  ],
+  "restart_rules": "A missed dinner isn't made up. A missed week restarts with one dinner the next week.",
+  "addon_tracks": [
+    "Suggested: Family Table Talk Prompts"
+  ],
+  "price_log": [
+    {
+      "from": null,
+      "to": 0,
+      "basis": "Free starter template",
+      "date": "2026-10-29"
+    }
+  ]
+}
