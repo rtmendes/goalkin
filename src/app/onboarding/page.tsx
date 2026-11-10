@@ -1,5 +1,5 @@
-import { ButtonLink, Card } from "@/components/ui";
-import { OnboardingFlow, type OnboardingTemplate } from "@/components/onboarding/flow";
+import { type OnboardingTemplate } from "@/components/onboarding/flow";
+import { OnboardingGate } from "@/components/onboarding/gate";
 import { requireUser } from "@/lib/auth";
 import { effectivePlan, limits } from "@/lib/entitlements";
 import { variantFor } from "@/lib/experiments";
@@ -19,19 +19,6 @@ export default async function OnboardingPage({ searchParams }: { searchParams: P
     variantFor("onboarding_order", user.id),
   ]);
 
-  if ((active ?? 0) >= lim.activeGoals) {
-    return (
-      <Card>
-        <h1 className="font-display text-2xl font-bold">You already have an active goal</h1>
-        <p className="mt-2 text-muted">The free plan holds one active goal at a time. Pause or finish it to start another, or upgrade for unlimited goals.</p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          <ButtonLink href="/app/goals">My goals</ButtonLink>
-          <ButtonLink href="/pricing" variant="secondary">See Pro</ButtonLink>
-        </div>
-      </Card>
-    );
-  }
-
   const owned = new Set((lib ?? []).map((l) => l.template_id as string));
   const templates: OnboardingTemplate[] = listings.map((t) => ({
     id: t.id, name: t.name, area: t.area, tier: t.tier, summary: t.summary,
@@ -45,7 +32,8 @@ export default async function OnboardingPage({ searchParams }: { searchParams: P
   }
 
   return (
-    <OnboardingFlow
+    <OnboardingGate
+      blocked={(active ?? 0) >= lim.activeGoals}
       userId={user.id}
       displayName={profile.display_name?.split(" ")[0] ?? null}
       templates={templates}

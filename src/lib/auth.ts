@@ -17,9 +17,12 @@ export async function requireUser(next = "/app") {
   let { data: profile } = await supabase.from("gk_profiles").select("*").eq("id", user.id).maybeSingle();
   if (!profile) {
     const name = (user.user_metadata?.full_name as string | undefined) ?? user.email?.split("@")[0] ?? null;
-    const { data } = await supabase.from("gk_profiles").insert({ id: user.id, display_name: name }).select("*").single();
-    profile = data;
+    // Layout and page render in parallel on the first visit, so ignore a duplicate. The re-read
+    // must differ from the first lookup: React memoizes identical GETs within one request.
+    await supabase.from("gk_profiles").upsert({ id: user.id, display_name: name }, { onConflict: "id", ignoreDuplicates: true });
+    ({ data: profile } = await supabase.from("gk_profiles").select("*").eq("id", user.id).limit(1).maybeSingle());
   }
+  if (!profile) throw new Error("Could not load or create your GoalKin profile");
   return { supabase, user, profile: profile as Profile };
 }
 
